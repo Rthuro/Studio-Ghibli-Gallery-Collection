@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 *{
     padding:0;
     margin:0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Poppins", sans-serif;
     box-sizing: border-box;
 }
 html{
@@ -25,12 +27,12 @@ header{
     justify-content: center ;
     column-gap: 25px;
     width:100%;
-    border-bottom: 1px solid gray;
     position: sticky;
     top:0;
-    background-color: #ffffff;
+    background-color: #109bebd8;
     z-index: 5;
     padding: 5px;
+    color:#ffffff;
 }
 header .img_container{
     width:100%;
@@ -50,7 +52,7 @@ header .search_bar input{
     width:100%;
     padding: 8px;
     padding-left: 10px;
-    border: 1px solid black;
+    border: none;
     outline: none;
     border-radius: 5px;
 }
@@ -72,18 +74,17 @@ header ul{
 header .logo_name{
     margin-left: -30px;
     margin-right: 50px;
-    font-size: 0.9rem;
-
+    font-size: 1rem;
 }
 header p{
     font-size: 1.2rem;
 }
 header ul li{
-    color: #000000;
+    color:#ffffff;
     padding:0 5px;
 }
 header ul li:hover{
-    color: rgb(224, 0, 0);
+    color: #ffffffd6;
 }
 
 .featured_sec {
@@ -93,16 +94,17 @@ header ul li:hover{
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    box-shadow: 1px 5px 10px  rgb(193, 193, 193);
+    border: 1px solid #e5e5e5;
     overflow: hidden;
     margin: 15px 0;
 
 }
 
 .featured_sec img{
-    width:60%;
+    width:55%;
     height:100%;
     box-shadow: -2px 0 10px rgb(49, 49, 49);
+    background-color: #109ceb;
 }
 .featured_text{
     height: 100%;
@@ -127,12 +129,15 @@ header ul li:hover{
     width: 50%;
     cursor: pointer;
     font-size: 1.1rem;
-    background-color: rgb(243, 243, 243) ;
-    border: 1px solid black;
+    background-color: #222222;
+    border:none;
+    color:#ffffff;
+    border-radius: 50px;
     transition: 0.20s ease;
 }
-.featured_text button:hover ,.content_descrip button:hover{
-    background-color:rgb(221, 221, 221);
+
+.featured_text button:hover, .content_descrip button:hover {
+    background-color: rgba(42, 42, 42, 0.922);
 }
 .gallery{
     display: flex;
