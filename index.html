@@ -3,59 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Studio Ghibli Gallery Collection | Home Page</title>
-    <link rel="stylesheet" href="ghibli_gallery_style.css">
-    <link rel="icon" href="./assets/img/Studio_Ghibli_logo.svg" type="image/x-icon" >
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon"  sizes="32x32" href="assets/icons/logo.svg" type="image/x-icon" >
+    <title>Studio Ghibli</title>
 </head>
-<body>
-    <header>
-        <img src="./assets/img/totoro.png" alt="">
-        <p class="logo_name">Studio Ghibli Gallery Collection</p>
-        
-        <div class="search_bar">
-            <input type="text" name="search" id="search" placeholder="Search">
-            <img class="search_bttn" src="./assets/icons/bx-search.svg" alt="">
-        </div>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="store.html">Store</a></li>
-            <li><a href="#">Login</a></li>
-            <li><a href="#">Cart</a></li>
+<body >
+    <nav class="flex row">
+        <div class="logo"> </div>
+        <ul class="nav flex row">
+            <li><a id="home" href="index.html">Home</a></li>
+            <li><a id="works-gallery" href="">Works & Gallery</a></li>
+            <li><a id="merchandise" href="">Merchandise</a></li>
+            <li> <a id="signup-login" href="">Signup / Login</a></li>
         </ul>
-    </header>
-    <div class="featured_sec">
-        <div class="featured_text">
-                <p>Studio Ghibli Gallery Collection</p>
-                 <button id="redirect_to_store">Buy Merchandise</button>
-                 <script type="text/javascript">
-                    document.getElementById('redirect_to_store').onclick = function (){
-                        location.href = "./store.html";
-                    };
-                 </script>
-        </div>
-        <img src="./assets/img/totoro.png" alt="">
-    </div>
-    <section class=" gallery">
-        <div class="one content_descrip">
-             <p>Spirited Away</p>
-         
-            <p>In this animated feature by noted Japanese director Hayao Miyazaki, 10-year-old Chihiro (Rumi Hiiragi) and her parents (Takashi Naitô, Yasuko Sawaguchi) stumble upon a seemingly abandoned amusement park. After her mother and father are turned into giant pigs, Chihiro meets the mysterious Haku (Miyu Irino), who explains that the park is a resort for supernatural beings who need a break from their time spent in the earthly realm, and that she must work there to free herself and her parents.</p>
-            <p><strong>Release date:</strong> July 20, 2001 (Japan)</p>
-            <p><strong>Director:</strong><a href="https://www.google.com/search?sca_esv=0aa168a204f4e042&sxsrf=ACQVn08kHTVxOJypk3GESajmvpLP94e1Vg:1707098988176&q=Hayao+Miyazaki&si=AKbGX_paaCugDdYkuX2heTJMr0_FGRox2AzKVmiTg2eQr2d-rl2lIwIcHGOoiMCOyoC6biPXNNTw3dk5lQDgA319tKNY_vF8Y6p2CmiphR_plzdJSOgK0MEeJ5GuSzYm43jln2m49Pt2nR2RPdyD_sbF9WcT96PaKtgmFsx4tVgOnkxrzRcxtFpLDEI0rWoGn3HDxp5_577W&sa=X&ved=2ahUKEwjwkqWmj5OEAxUdr1YBHWzMDCUQmxMoAHoECB8QAg&cshid=1707098996000097&biw=1536&bih=695&dpr=1.25"> Hayao Miyazaki</a></p>
-            <p><strong>Nominations:</strong><a href="https://www.google.com/search?sca_esv=0aa168a204f4e042&sxsrf=ACQVn08kHTVxOJypk3GESajmvpLP94e1Vg:1707098988176&q=Best+Animated+Feature&si=AKbGX_paaCugDdYkuX2heTJMr0_FGRox2AzKVmiTg2eQr2d-roQE8L9F7K7i0G9t2jR9W8QeTc3_5In4dxh3xYwACjN572u4KorCCHZ4GleBp5kqgKMTSbTLqCwVxYxxm6aeLwh3WdoK9astamKlIXAnJa2M1uOJ8edTq80NlR35oPXaPYECZQqc40TrG0F6X1YsEHX4iL5jwbUBWp1iRlxaMLdFPphPwROthoJsTGOnPAFbw8yV7ld2Y10kMNTTkxs941fzmVBHT-zwHlV21iXIhGbKZVVC1g%3D%3D&sa=X&ved=2ahUKEwjwkqWmj5OEAxUdr1YBHWzMDCUQmxMoAHoECCIQAg&cshid=1707098996000097&biw=1536&bih=695&dpr=1.25"> Academy Award for Best Animated Feature</a>, <a href="https://www.google.com/search?sca_esv=0aa168a204f4e042&sxsrf=ACQVn08kHTVxOJypk3GESajmvpLP94e1Vg:1707098988176&q=spirited+away+nominations&stick=H4sIAAAAAAAAAOPgE-LQz9U3yDJLMtVSyk620k8sTyxKgZDx5Zl5ealFVnn5uZl5iSWZ-XnFi1gliwsyizJLUlMUgGoqFZDkAHcCdgRMAAAA&sa=X&ved=2ahUKEwjwkqWmj5OEAxUdr1YBHWzMDCUQ44YBKAF6BAgiEAM&cshid=1707098996000097&biw=1536&bih=695&dpr=1.25">MORE</a></p>
-            <p><strong>Box office:</strong> $395.8 million</p>
-            <button>Buy Merchandise</button>
-            
-        </div>
-        <div class="gallery_container">
-            <div class="item"><img src="./assets/img/spirited_away/𝙘𝙝𝙞𝙝𝙞𝙧𝙤 𝙖𝙣𝙙 𝙝𝙖𝙠𝙪.jpg" alt=""></div>
-            <div class="item"><img src="./assets/img/spirited_away/download (1).jpg" alt=""></div>
-            <div class="item"><img src="./assets/img/spirited_away/spiritedaway.jpg" alt=""></div>
-            <div class="item"><img src="./assets/img/spirited_away/chihiro icon.jpg" alt=""></div>
-            <div class="item"><img src="./assets/img/spirited_away/Chihiro Ogino.jpg" alt=""></div>
-        </div>
-    </section>
+    </nav>
+    
+    <main class="flex col">
+        <section class="featured flex col">
+            <div class="featured-content flex col">
+               
+                <div class="context flex col">
+                    <p class="headline">The Art of Ghibli</p>
+                    <p class="headline"> A Gallery Collection & Official Merchandise </p>
+                    <p class="subtitle">
+                        Immerse Yourself in Ghibli: Explore Our Collection & Shop
+                    </p>
+                </div>
+                <button>Explore Collection </button>
+            </div>
+        </section>
 
-   
+        <p class="headline-2">Welcome to the world of <span>Studio Ghibli!</span></p> 
+
+        <div class="fav-film-container flex col">
+            <div class="headline-2 ">
+                Most <span>favorite</span> Studio Ghibli Films of all time
+            </div>
+            <div class="films">
+                
+            </div>
+        </div>
+
+        <section class="about gallery flex row">
+            <div class="headline">This immersive online gallery celebrates the breathtaking artistry and unforgettable moments from every Ghibli film. </div>
+            <div class="about-w-nav flex col">
+                <div class="descrip">Explore stunning high-resolution photographs that capture the essence of your favorite scenes and beloved characters.</div>
+                <button class="to-gallery flex row">
+                    Explore Collection
+                    <img src="assets/icons/bx-right-arrow-alt.svg" alt="">
+                </button>
+            </div>
+        </section>
+        <section class="about merch flex row">
+            <div class="headline">Our curated merchandise store allows you to take a piece of the magic home with you. </div>
+            <div class="about-w-nav flex col">
+                <div class="descrip"> Find officially licensed apparel, keepsakes, and collectibles inspired by the iconic worlds of Hayao Miyazaki and Studio Ghibli.</div>
+                <button class="to-merch flex row">
+                    Explore Merchandise
+                    <img src="assets/icons/bx-right-arrow-alt.svg" alt="">
+                </button>
+            </div>
+        </section>
+
+        <footer class="flex col">
+            <p>Want to get in touch? Subscribe!</p>
+            <div class="subscription flex row">
+                <input type="email" name="email" id="email" placeholder="Email">
+                <button  type="button">Subscribe</button>
+            </div>
+            <div class="after-subscrip flex row">
+                <div class="links flex col">
+                    <p>Help</p>
+                    <ul>
+                        <li><a href="">Customer service</a></li>
+                        <li><a href="">Track my orde</a>r</li>
+                    </ul>
+                </div>
+                <div class="links flex col">
+                    <p>Resources</p>
+                    <ul>
+                        <li><a href="">Photo Credits</a> </li>
+                    </ul>
+                </div>
+                <div class="links flex col">
+                    <p>Our Networks</p>
+                    <ul>
+                        <li><a href="">Instagram</a></li>
+                        <li><a href="">Facebook</a></li>
+                        <li><a href="">Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <img src="assets/icons/logo2.svg" alt="">
+        </footer>
+    </main>
 </body>
 </html>
