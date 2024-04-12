@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    /* Gradients */
+    --white-bg: repeating-radial-gradient(circle at center center, transparent 0px, transparent 13px,rgba(0,0,0,0.03) 13px, rgba(0,0,0,0.03) 24px,transparent 24px, transparent 62px,rgba(0,0,0,0.03) 62px, rgba(0,0,0,0.03) 96px),repeating-radial-gradient(circle at center center, rgb(255,255,255) 0px, rgb(255,255,255) 14px,rgb(255,255,255) 14px, rgb(255,255,255) 18px,rgb(255,255,255) 18px, rgb(255,255,255) 28px,rgb(255,255,255) 28px, rgb(255,255,255) 32px); 
+    --bg-size-white-bg: 21px 21px;
+
+    --blue-bg:  radial-gradient(circle at 85% 1%, hsla(190,0%,93%,0.05) 0%, hsla(190,0%,93%,0.05) 96%,transparent 96%, transparent 100%),radial-gradient(circle at 14% 15%, hsla(190,0%,93%,0.05) 0%, hsla(190,0%,93%,0.05) 1%,transparent 1%, transparent 100%),radial-gradient(circle at 60% 90%, hsla(190,0%,93%,0.05) 0%, hsla(190,0%,93%,0.05) 20%,transparent 20%, transparent 100%),radial-gradient(circle at 79% 7%, hsla(190,0%,93%,0.05) 0%, hsla(190,0%,93%,0.05) 78%,transparent 78%, transparent 100%),radial-gradient(circle at 55% 65%, hsla(190,0%,93%,0.05) 0%, hsla(190,0%,93%,0.05) 52%,transparent 52%, transparent 100%),linear-gradient(135deg, rgb(37, 56, 222),rgb(96, 189, 244)); 
+
+    --light-blue:  linear-gradient(to bottom, #ffffff5c 40%, #dcf1ff5b 90%);
+}
+*{
+    font-family: "Poppins", sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color:inherit;
+}
+button{
+    cursor: pointer;
+}
+.flex{
+    display: flex;
+}
+.row{
+    flex-direction: row;
+}
+.col{
+    flex-direction: column;
+}
+ul{
+    list-style: none;
+
+}
+nav{
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    align-items: center;
+    height: 55px;
+    position: fixed;
+    top:0;
+    left:0;
+    right: 0;
+    z-index: 10;   
+    padding:8px 12px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+nav div a{
+    font-size: 1.1rem;
+    color:#222222;
+}
+nav div{
+    display: flex;
+    align-items: center;
+}
+nav .left{
+    gap:4px;
+}
+nav .left a{
+    font-weight: 500;
+}
+nav .left img{
+    object-fit: contain;
+}
+
+nav .center{
+    justify-content: center;
+    gap:18px;
+}
+
+nav .right{
+    justify-content: end;
+}
+nav .right #login{
+    padding: 4px 16px;
+    border-radius: 4px;
+    background-color: #222222;
+    color: #fff;
+}
+nav .center a:hover{
+    color: #0781c8;
+    transition: background-color 0.15s ease-in;
+
+}
+
+footer{
+    width:100%;
+    height: auto;
+    justify-content: start;
+    align-items: center;
+    padding: 2% 0;
+    background-image:var(--blue-bg);
+    margin-top: 30px;
+}
+
+footer p{
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+footer .first-col{
+    justify-content: center;
+    width:80%;
+    gap:5%;
+}
+footer .first-col .links p{
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+footer .first-col .links ul li{
+    font-weight: 500;
+    color:#222222;
+}
+footer .first-col .links ul li:hover{
+    color:#000000;
+    text-decoration: underline;
+}
+footer img{
+    width:20%;
+    height: 60px;
+    margin: 2% 0;
+}
