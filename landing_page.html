@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/lading_page.css">
+    <link rel="stylesheet" href="css/nav-footer.css">
+    <link rel="icon" sizes="32x32" href="assets/icons/logo.svg" type="image/x-icon">
+    <title>Studio Ghibli</title>
+</head>
+<body>
+    <nav >
+        <div class="left">
+            <img src="assets/img/totoro-logo-c.png" width="38" height="38" alt="">
+            <a  href="landing_page.html">Studio Ghibli Collection</a>
+        </div>
+        <div class="center">
+            <a id="home" href="index.html">Home</a>
+            <a id="works-gallery" href="pages/works_gallery.html">Works & Gallery</a>
+            <a id="shop" href="pages/shop.html">Shop</a>
+        </div>
+        <div class="right">
+            <a id="login" href="pages/login.html">Login</a>
+        </div>
+    </nav>
+
+        <header class="bg flex col">
+            <div class="bg-content flex col">
+                <div class="context flex col">
+                    <h1 class="headline">Welcome to the world of <span>Studio Ghibli!</span></h1>
+                    <p class="headline-2">Explore Our Gallery Collection & Shop and Immerse Yourself in Ghibli. </p>
+                </div>
+                <button id="main-bttn" class="flex row">
+                    Explore Studio Ghibli Collection
+                    <img src="assets/icons/arrow-up-right-w.svg" alt="">
+                </button>
+            </div>
+        </header>
+
+        <section class="intro-gallery flex col">
+            <div class="black-bg"></div>
+            <p class="head">
+                <strong>Explore Our Gallery Collection</strong>
+            </p>
+                <p>
+                Dive into the enchanting universe of Studio Ghibli, where every frame tells a story and every character captures the imagination. Our Gallery Collection invites you to journey through the masterpieces crafted by the legendary Hayao Miyazaki and his talented team. From the whimsical landscapes of "My Neighbor Totoro" to the epic adventures of "Spirited Away," immerse yourself in the breathtaking beauty and timeless charm of Ghibli's animated films.
+            </p>
+            <button id="gallery-bttn" class="flex row">
+                    Explore Gallery
+                    <img src="assets/icons/arrow-right-b.svg" alt="">
+            </button>
+        </section>
+
+        <section class="merchandise flex col">
+            <p class="head"><strong>Shop Ghibli Merchandise</strong></p>
+            <p>Elevate your Ghibli experience with our exclusive merchandise collection, inspired by the iconic characters and enchanting worlds brought to life on the silver screen. From adorable plushies and stylish apparel to elegant decor and collectible figurines, our shop is a treasure trove for Ghibli enthusiasts of all ages.</p>
+            <div class="sub">
+                <div class="container">
+                    <img src="assets/img/ghibli_gif2.gif" style="width:56px;height:56px;">
+                    <p class="text1">Indulge in Ghibli Goodies</p>
+                    <p class="text2">Indulge in the whimsy of "Kiki's Delivery Service" with our charming Jiji plushies, or add a touch of magic to your wardrobe with Totoro-themed accessories. Bring the spirit of adventure home with intricately crafted replicas from "Castle in the Sky," or transform your living space into a scene from "Howl's Moving Castle" with our enchanting decor pieces.</p>
+                </div>
+                <div class="container">
+                    <img src="assets/img/ghibli_gif.gif" style="width:56px;height:56px;">
+                    <p class="text1">Experience the Magic</p>
+                    <p class="text2">Every item in our collection is carefully selected to capture the essence of Studio Ghibli's enchanting storytelling and artistic brilliance. Whether you're searching for the perfect gift or treating yourself to a little piece of Ghibli magic, our shop is your gateway to a world of wonder and imagination.</p>
+                </div>
+                <div class="container">
+                    <img src="assets/img/ghibli_gif3.gif" style="width:56px;height:56px;">
+                    <p class="text1">Immerse Yourself</p>
+                    <p class="text2">Immerse yourself in the magic of Studio Ghibli today – explore our gallery collection, shop for unique merchandise, and let the spirit of Ghibli inspire your journey.</p>
+                </div>
+            </div>
+            <button id="shop-bttn" class="flex row">
+                Explore Shop
+                <img src="assets/icons/arrow-right-w.svg" alt="">
+            </button>
+        </section>
+
+        <section class="msg flex row">
+            <img src="assets/img/totoro-gif.gif" alt="">
+            <div class="msg-container">
+                <p>Embrace the Magic of Ghibli with Us!</p>
+                <p>Indulge in our exclusive merchandise collection, featuring beloved characters and iconic scenes from your favorite films.</p>
+                <p>Join us on this whimsical journey through the wonders of Studio Ghibli, and let the spirit of Miyazaki inspire your imagination.
+                </p>
+            </div>
+        </section>
+
+    <footer class="flex col">
+        <div class="first-col flex row">
+            <div class="links flex col">
+                <p>Help</p>
+                <ul>
+                    <li><a href="">Customer service</a></li>
+                    <li><a href="">Track my order</a></li>
+                </ul>
+            </div>
+            <div class="links flex col">
+                <p>Resources</p>
+                <ul>
+                    <li><a href="">Photo Credits</a> </li>
+                </ul>
+            </div>
+            <div class="links flex col">
+                <p>Our Networks</p>
+                <ul>
+                    <li><a href="">Instagram</a></li>
+                    <li><a href="">Facebook</a></li>
+                    <li><a href="">Twitter</a></li>
+                </ul>
+            </div>
+        </div>
+        <img src="assets/icons/logo2.svg" alt="">
+    </footer>
+    <script>
+        const main_bttn = document.getElementById("main-bttn");
+        const gallery_bttn = document.getElementById("gallery-bttn");
+        const shop_bttn = document.getElementById("shop-bttn");
+        
+        main_bttn.addEventListener('click', () => {
+            window.location.href = "index.html";
+        });
+        gallery_bttn.addEventListener('click', () => {
+            window.location.href = "pages/works_gallery.html";
+        });
+        shop_bttn.addEventListener('click', () => {
+            window.location.href = "pages/shop.html";
+        });
+    </script>
+</body>
+</html>
