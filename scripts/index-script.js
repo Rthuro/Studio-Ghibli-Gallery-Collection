@@ -1,15 +1,20 @@
 
- /* Buttons Navigate to next page */
 
- const gallery_bttn = document.getElementById("gallery-bttn");
+
+ /* Buttons Navigate to next page */
+ const banner_bttn = document.getElementById("banner-bttn");
+ const browse_bttn = document.getElementById("browse-gallery");
  const shop_bttn = document.getElementById("shop-bttn");
 
- gallery_bttn.addEventListener('click', () => {
-   window.location.href = "../pages/works_gallery.html";
+ banner_bttn.addEventListener('click', () => {
+  window.location.href = "pages/shop.php";
+});
+ browse_bttn.addEventListener('click', () => {
+   window.location.href = "pages/works_gallery.php";
  });
 
 shop_bttn.addEventListener('click', () => {
-   window.location.href = "../pages/shop.html";
+   window.location.href = "pages/shop.php";
  });
 
  const showMoreBttn = document.getElementById('g-show-more-bttn');
@@ -38,28 +43,7 @@ shop_bttn.addEventListener('click', () => {
 
 
 
-const ImgHoverContainer = document.querySelectorAll('.img-container');
 
-ImgHoverContainer.forEach(container => {
-    container.addEventListener('click', () => { 
-      const ImgHovered = container.querySelector('.ImgHovered');
-      ImgHovered.classList.toggle('active');
-    });
-  });
-
-/* TO download image from the landing page */
-const downloadButtons = document.querySelectorAll('#download-bttn');
-
-  downloadButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      const closestImg = button.closest('.img-container').querySelector('img');
-      const imageSrc = closestImg.src;
-      const link = document.createElement('a');
-      link.href = imageSrc;
-      link.download = link.href.split('/').pop();  
-      link.click();
-    });
-  });
 
 
  

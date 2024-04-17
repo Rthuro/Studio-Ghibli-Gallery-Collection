@@ -18,6 +18,7 @@
 a{
     text-decoration: none;
     color:inherit;
+    cursor: pointer;
 }
 button{
     cursor: pointer;
@@ -39,7 +40,6 @@ nav{
     display: grid;
     grid-template-columns: 25% 50% 25%;
     align-items: center;
-    height: 55px;
     position: fixed;
     top:0;
     left:0;
@@ -74,18 +74,96 @@ nav .center{
 
 nav .right{
     justify-content: end;
+    gap:16px;
+}
+nav .right #cart{
+    cursor: pointer;
 }
 nav .right #login{
     padding: 4px 16px;
     border-radius: 4px;
     background-color: #222222;
     color: #fff;
+    font-size: inherit;
+    border:none;
 }
+
 nav .center a:hover{
     color: #0781c8;
     transition: background-color 0.15s ease-in;
 
 }
+
+/* LOG IN AND CREATE ACCOUNT */
+.log-in{
+    z-index: 15;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    visibility: hidden;
+}
+
+.m-container{
+    width: 400px;
+    height: auto;
+    padding: 24px;
+    align-items: center;
+    gap:16px;
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+}
+.m-container .wc{
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+.m-container .container{
+    align-items: start;
+    gap:4px;
+    width: 100%;
+}
+.m-container .container input{
+    padding:8px;
+    border-radius: 0.5rem;
+    border:1px solid #222222;
+    width: 100%;
+}
+.m-container #bttn{
+    padding: 8px 0 ;
+    width:100%;
+    color:#ffffff;
+    background-color: #0781c8;
+    border:none;
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
+}
+.m-container .blue{
+    color:#0773b1;
+}
+.m-container a:hover{
+    text-decoration: underline;
+}
+
+#login-container, #create-container{
+    position:absolute;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+}
+#login-container{
+     z-index: 5;
+     visibility: hidden;
+}
+#create-container{
+     z-index: 1;
+     visibility: hidden;
+ }
+
 
 footer{
     width:100%;

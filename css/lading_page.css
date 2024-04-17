@@ -9,6 +9,9 @@
     --blue-bg:  radial-gradient(circle at 85% 1%, hsla(190,0%,93%,0.05) 0%, hsla(190,0%,93%,0.05) 96%,transparent 96%, transparent 100%),radial-gradient(circle at 14% 15%, hsla(190,0%,93%,0.05) 0%, hsla(190,0%,93%,0.05) 1%,transparent 1%, transparent 100%),radial-gradient(circle at 60% 90%, hsla(190,0%,93%,0.05) 0%, hsla(190,0%,93%,0.05) 20%,transparent 20%, transparent 100%),radial-gradient(circle at 79% 7%, hsla(190,0%,93%,0.05) 0%, hsla(190,0%,93%,0.05) 78%,transparent 78%, transparent 100%),radial-gradient(circle at 55% 65%, hsla(190,0%,93%,0.05) 0%, hsla(190,0%,93%,0.05) 52%,transparent 52%, transparent 100%),linear-gradient(135deg, rgb(37, 56, 222),rgb(96, 189, 244)); 
 
     --light-blue:  linear-gradient(to bottom, #ffffff5c 40%, #dcf1ff5b 90%);
+
+    --fnt-clr-blue: #0a7cff;
+    --fnt-clr-black: #222222;
 }
 *{
     font-family: "Poppins", sans-serif;
@@ -46,20 +49,21 @@ body{
 /* ----- Header Part ----- */
 
 .bg{
-    background-image: var(--light-blue);
+    position: relative;
     width:100%;
-    height: 725px;
+    height: 740px;
     overflow: hidden;
     z-index: 1;
+    background: url(../assets/img/ghib.png) no-repeat center;
+    background-size:cover;
 }
 .bg-content{
     width: 100%;
     height: 100%;
+    background-color: #2222226d;
     justify-content:center;
     align-items: center;
     padding: 1.8% 0;
-    background: url(../assets/img/totoro-crop.png) no-repeat right;
-    background-size:contain;
 }
 
 .bg button{
@@ -84,7 +88,7 @@ body{
     text-align: center;
     font-size: 4rem;
     font-weight: 800;
-    color: #222222;
+    color: #fff;
     width:100%;
     height: 80px;
     margin:3% 0 2% 0;
@@ -99,7 +103,7 @@ body{
 .context .headline-2{
     font-size: 1.6rem;
     font-weight: 400;
-    color: #222222;
+    color: #fff;
 }
 
 
@@ -107,7 +111,7 @@ section{
     width:auto;
     height: 700px;
     gap:16px;
-    margin:0 120px;
+    margin: 0 120px;
     justify-content: center;
     align-items: center;
 }
@@ -124,62 +128,17 @@ section p strong{
     font-size: 2.5rem;
     font-weight: 700;
     display: block;
-    
+}
+.gallery{
+    margin-top: 100px;
+}
+.gallery img{
+    width: 1000px;
+    height: auto;
+    object-fit: contain;
+    box-shadow:0px 1px 4px rgba(0, 0, 0, 0.16) ;
 }
 
-.intro-gallery {
-    margin: 60px;
-    padding: 0 16px;
-    width:fit-content;
-    height: 550px;
-    overflow: hidden;
-    background: url(../assets/img/ghib-trans.png) no-repeat right;
-    background-size: cover ;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    border-radius: 0.5rem;
-}
-
-.intro-gallery .black-bg{
-    position: absolute;
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
-    background-color: #22222277;
-    z-index: 1;
-}
-.intro-gallery p, .intro-gallery .head{
-    color:#fff;
-}
-
-.intro-gallery button, .intro-gallery p{
-    z-index: 5;
-}
-.intro-gallery  button{
-    justify-content: space-between;
-    align-items: center;
-    width:fit-content;
-    font-size: 1rem;
-    font-weight: 500;
-    padding: 4px 16px;
-    border:none;
-    border-radius: 20px;
-    background-color: #fff;
-    margin: 16px 0;
-    color: #222222;
-    gap:8px;
-    cursor: pointer;
-    z-index: 5;
-    transition: 0.15s ease-in;
-}
-.intro-gallery  button img{
-    width:20px;
-}
-.intro-gallery button:hover{
-    background-color: #eaeaea;
-}
 
 .merchandise .sub{
     display: grid;
@@ -213,10 +172,11 @@ section p strong{
     color:#222222;
     width:90%;
 }
-.merchandise button{
+.merchandise button, .gallery  button{
     justify-content: space-between;
     align-items: center;
     width:fit-content;
+    height: fit-content;
     font-size: 1.1rem;
     padding: 4px 16px;
     border:none;
@@ -229,10 +189,10 @@ section p strong{
     z-index: 5;
     transition: 0.15s ease-in;
 }
-.merchandise button img{
+.merchandise button img, .gallery  button img{
     width:20px;
 }
-.merchandise button:hover{
+.merchandise button:hover , .gallery  button:hover{
     background-color: #3b3b3b ;
 }
 

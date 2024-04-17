@@ -9,6 +9,9 @@
     --blue-bg:  radial-gradient(circle at 85% 1%, hsla(190,0%,93%,0.05) 0%, hsla(190,0%,93%,0.05) 96%,transparent 96%, transparent 100%),radial-gradient(circle at 14% 15%, hsla(190,0%,93%,0.05) 0%, hsla(190,0%,93%,0.05) 1%,transparent 1%, transparent 100%),radial-gradient(circle at 60% 90%, hsla(190,0%,93%,0.05) 0%, hsla(190,0%,93%,0.05) 20%,transparent 20%, transparent 100%),radial-gradient(circle at 79% 7%, hsla(190,0%,93%,0.05) 0%, hsla(190,0%,93%,0.05) 78%,transparent 78%, transparent 100%),radial-gradient(circle at 55% 65%, hsla(190,0%,93%,0.05) 0%, hsla(190,0%,93%,0.05) 52%,transparent 52%, transparent 100%),linear-gradient(135deg, rgb(37, 56, 222),rgb(96, 189, 244)); 
 
     --light-blue:  linear-gradient(to bottom, #ffffff5c 40%, #dcf1ff5b 90%);
+
+    --fnt-clr-blue: #0a7cff;
+    --fnt-clr-black: #222222;
 }
 *{
     font-family: "Poppins", sans-serif;
@@ -19,6 +22,7 @@
 a{
     text-decoration: none;
     color:inherit;
+    cursor: pointer;
 }
 button{
     cursor: pointer;
@@ -37,13 +41,14 @@ ul{
 
 }
 body{
+    position: relative;
     background-image: #ffffff;
-
 }
 
 nav .center a:first-child{
-    color: #0781c8;
+    color: var(--fnt-clr-blue);
 }
+
 
 
 /* ----- Header Part ----- */
@@ -54,16 +59,17 @@ nav .center a:first-child{
     height: 740px;
     overflow: hidden;
     z-index: 1;
-    background: url(../assets/img/ghib.png) no-repeat center;
+    background: url(../assets/img/banner0.png) no-repeat center;
     background-size:cover;
 }
 .bg-content{
     width: 100%;
     height: 100%;
-    background-color: #2222226d;
+    background-color: #2222228c;
     justify-content:center;
     align-items: center;
-    padding: 1.8% 0;
+    padding-top: 150px;
+    
 }
 
 .bg button{
@@ -72,7 +78,7 @@ nav .center a:first-child{
     border-radius: 25px;
     border:none;
     color:#ffffff;
-    background-color: #0781c8;
+    background-color: var(--fnt-clr-blue);
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     align-items: center;
     gap:8px;
@@ -81,29 +87,28 @@ nav .center a:first-child{
     background-color: #0773b1;
 }
 .context{
-    margin-bottom: 2em;
+    align-items: center;
 }
+
 h1{ 
     display: block;
     text-align: center;
-    font-size: 4rem;
-    font-weight: 800;
+    font-size: 2.4rem;
+    font-weight: 500;
     color: #ffffff;
     width:100%;
-    height: 80px;
-    margin:3% 0 2% 0;
-}
-h1 span{
-    color:#0781c8;
 }
 
 .context p{
     text-align: center;
+    margin-bottom: 16px;
+
 }
 .context .headline-2{
-    font-size: 2rem;
-    font-weight: 500;
+    font-size: 1.2rem;
+    font-weight: 300;
     color: #ffffff;
+    width:900px;
 }
 
 /* ----- Second Section -----*/
@@ -132,7 +137,7 @@ h1 span{
     align-items: center;
     overflow: hidden;
     height: 520px;
-    padding: 4px;
+    padding:8px 4px;
     transition: height 0.15s ease-in;
 }
 .works .works-list-container.showmore{
@@ -144,6 +149,10 @@ h1 span{
     height: 250px;
     width: 160px;
     cursor: pointer;
+    transition: 0.15s ease-in-out;
+}
+.works .works-list-container .film:hover{
+    transform: scale(1.05);
 }
 .works .works-list-container .film p{
     font-size: 0.8rem;
@@ -195,6 +204,7 @@ h1 span{
 .works button img{
     height: 22px;
 }
+
 /* ----- Third Section */
 
 .gallery-part{
@@ -202,15 +212,16 @@ h1 span{
     justify-content: center;
     width: auto;
     height:800px;
+    z-index: 5;
 }
 .gallery-part .maintext, .merch-part .maintext{
-    color:#0781c8;
+    color:var(--fnt-clr-blue);
     font-size: 2.5rem;
-    font-weight: 700;
+    font-weight: 600;
 
 }
-.gallery-part .subtext, .merch-part .subtext{
-    color:#3a9db4;
+.gallery-part .subtext{
+    color:#0898eb;
 }
 
 .gallery-part button, .merch-part button{
@@ -237,7 +248,8 @@ h1 span{
     box-shadow:0px 1px 4px rgba(0, 0, 0, 0.16) ;
 }
 
-.gallery-part .gallery-container, .merch-part .merch-container{
+.gallery-part .gallery-container{
+    position: relative;
     display:grid;
     justify-content: center;
     grid-template-columns:repeat(4,auto) ;
@@ -305,81 +317,154 @@ h1 span{
     background-color: #ffffffe1;
 }
 
+
+ .view-container {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #222222c6;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    gap: 16px;
+    visibility:hidden;
+    opacity:0;
+    transition:opacity 0.2s ease-in;
+    z-index: 50;
+}
+
+
+
+.view-container.active {
+    visibility:visible;
+    opacity:1;
+}
+
+
+.view-container .nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 8px 0;
+    background-color: #ffffff;
+}
+
+.view-container .nav p {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #222222;
+    font-weight: 500;
+}
+.view-container .nav .right img{
+    padding:8px;
+    background-color: #f0f0f0;
+    border-radius:0.5rem;
+    cursor: pointer;
+}
+.view-container .nav{
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    padding:8px 16px;
+    background-color: #fff;
+}
+.view-container .nav .left{
+    justify-content: start;
+}
+
+.view-container .nav .right{
+    justify-content: end;
+    align-items: center;
+    gap:8px;
+}
+
+.view-container .nav .right img:hover{
+    background-color: #c2c2c2;
+} 
+
+.view-container .movieImage {
+    width: auto;
+    height: 600px;
+}
+
 /* Merchandise Part */
 
 .merch-part{
     align-items: center;
     justify-content: center;
     width: 100%;
-    height:1000px;
-    background-image: var(--white-bg);
+    height:700px;
+    background: var(--white-bg);
     background-size: var(--bg-size-white-bg);
 }
 .merch-part .subtext{
-    width: 900px;
     text-align: center;
 }
-.collection {
-    align-items: center;
-    width: 100%;
-    gap:8px;
-    margin:16px 0;
-}
-.collection p:not(#merch-price){
-    font-size: 1.5rem;
-    font-weight: 600;
-    border-bottom: 2px solid #222222;
-    color:#222222
-}
-.collection .prod-container{
+
+ .prod-container{
     display:grid;
-    grid-template-columns: repeat(4,250px);
+    grid-template-columns: repeat(5,225px);
     width:fit-content;
     height: auto;
     gap:8px;
-    margin-top: 16px;
+    margin: 24px 0;
 }
-.collection .prod-container  .prod{
-    width:250px;
+ .prod-container  .prod{
+    width:fit-content;
     height: auto;
     align-items: center;
     gap:4px;
+    border:1px solid rgba(0, 0, 0, 0.16) ;
     box-shadow:0px 1px 4px rgba(0, 0, 0, 0.16) ;
+    cursor: pointer;
+    transition: 0.15s ease-in-out;
+    background-color: #fff;
 }
-.collection .prod-container .prod img{
+.prod-container  .prod:hover{
+    transform: scale(1.02);
+     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+ .prod-container .prod img{
     height: 220px;
     width:100%;
     object-fit: contain;
 }
-.collection .prod-container .prod-bttm{
+ .prod-container .prod-bttm{
     width: 100%;
     align-items: center;
     padding:8px;
-}
-.collection .prod-container .prod-bttm p,.collection .prod-container .prod-bttm a {
-    font-size: 0.9rem;
-}
-.collection .prod-container .prod-bttm #merch-name{
-    width: 100%;
     height: auto;
-    word-break: break-all;
-    text-align: center;
-    color:#222222 ;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
 }
-.collection .prod-container .prod-bttm #merch-price{
+.prod .prod-bttm p {
+    font-size: 0.8rem;
+}
+ .prod .prod-bttm .merch-name{
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color:#222222 ;
+}
+
+ .prod .prod-bttm #merch-price{
     color:#f00606;
     font-weight: 500;
 }
-.collection .prod-container .prod-bttm #add-to-cart-bttn{
+.prod .prod-bttm #add-to-cart-bttn{
     color:#ffffff;
     background-color: #f0060687;
     border: 1px dashed #e90000;
     font-weight: 500;
     transition: 0.15s ease-in-out;
+    font-size: 0.9rem;
 }
-.collection .prod-container .prod-bttm #add-to-cart-bttn:hover{
+ .prod .prod-bttm #add-to-cart-bttn:hover{
     background-color: #f00606b1;
 }
