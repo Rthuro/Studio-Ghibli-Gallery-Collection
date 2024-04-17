@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,6 +14,47 @@
 </head>
 
 <body>
+    <div id="login-create-container" class="log-in flex col">
+        <div id="login-container" class=" m-container flex col">
+            <p class="wc">WELCOME!</p>
+            <div class="container flex col">
+                <p>Email Address</p>
+                <input type="text" name="email" id="email" placeholder="email">
+            </div>
+            <div class="container flex col">
+                <p>Password</p>
+                <input type="text" name="password" id="password" placeholder="password">
+            </div>
+            <button id="bttn">Log in</button>
+            <a class="blue">Forget password?</a>
+            <p>Don't have an account? <a id="login-create" class="blue">Create one</a> </p>
+        </div>
+
+        <div id="create-container" class=" m-container flex col">
+            <p class="wc">Create an account</p>
+            <div class="container flex col">
+                <p>Username</p>
+                <input type="text" name="username" id="username" placeholder="username">
+            </div>
+            <div class="container flex col">
+                <p>Email Address</p>
+                <input type="text" name="email" id="email" placeholder="email">
+            </div>
+            <div class="container flex col">
+                <p>Password</p>
+                <input type="text" name="password" id="password" placeholder="password">
+            </div>
+            <div class="container flex col">
+                <p>Confirm Password</p>
+                <input type="text" name="confirm-password" id="confirm-password" placeholder="confirm password">
+            </div>
+            <button id="bttn">Create account</button>
+            <a class="blue">Forget password?</a>
+            <p>Have an account? <a id="create-login" class="blue">Log in</a> </p>
+        </div>
+       
+
+    </div>
     <nav>
         <div class="left">
             <img src="assets/img/totoro-logo-c.png" width="38" height="38" alt="">
@@ -18,22 +62,23 @@
         </div>
         <div class="center">
             <a id="home" href="index.html">Home</a>
-            <a id="works-gallery" href="">Works & Gallery</a>
-            <a id="shop" href="">Shop</a>
+            <a id="works-gallery" href="pages/works_gallery.php">Works & Gallery</a>
+            <a id="shop" href="pages/shop.php">Shop</a>
         </div>
         <div class="right">
-            <a id="login" href="">Login</a>
+            <button id="login">Login</button>
+            <img id="cart" src="assets/icons/shopping-bag.svg" alt="">
         </div>
     </nav>
 
     <header class="bg flex col">
         <div class="bg-content flex col">
             <div class="context flex col">
-                <h1 class="headline">Welcome to the world of <span>Studio Ghibli!</span></h1>
-                <p class="headline-2">The Art of Ghibli: A Gallery Collection & Official Merchandise </p>
+                <h1 class="headline">The Art of Ghibli: A Gallery Collection & Official Merchandise</h1>
+                <p class="headline-2">Find officially licensed apparel, keepsakes, and collectibles inspired by the iconic worlds of Hayao Miyazaki and Studio Ghibli.</p>
             </div>
-            <button id="gallery-bttn" class="flex row">
-                Browse Gallery Collection
+            <button id="banner-bttn" class="flex row">
+                Shop Now
                 <img src="assets/icons/arrow-up-right-w.svg" alt="">
             </button>
         </div>
@@ -45,7 +90,7 @@
         <div class="works-list-container">
             <div class="film flex col">
                 <img class="film-poster" src="assets/img/Official_poster/arrietty-poster.jpg" alt="">
-                <p class="film-title">Arrietty</p>
+                <p class="film-title">Borrower Arrietty</p>
             </div>
             <div class="film flex col">
                 <img class="film-poster" src="assets/img/Official_poster/aya1.jpg" alt="">
@@ -81,7 +126,7 @@
             </div>
             <div class="film flex col">
                 <img class="film-poster" src="assets/img/Official_poster/ocean-waves-poster.jpg" alt="">
-                <p class="film-title">The Boy and the Heron	</p>
+                <p class="film-title">Ocean Waves</p>
             </div>
             <div class="film flex col">
                 <img class="film-poster" src="assets/img/Official_poster/only-yesterday.jpg" alt="">
@@ -109,7 +154,7 @@
             </div>
             <div class="film flex col">
                 <img class="film-poster" src="assets/img/Official_poster/red-turtle.jpg" alt="">
-                <p class="film-title">Nausicaä of the Valley of the Wind</p>
+                <p class="film-title">The Red Turtle</p>
             </div>
             <div class="film flex col">
                 <img class="film-poster" src="assets/img/Official_poster/spirited-away-poster.jpg" alt="">
@@ -163,17 +208,18 @@
             This immersive online gallery celebrates the breathtaking artistry and unforgettable moments from every
             Ghibli film.
         </p>
-        <button id="gallery-bttn" class="flex row">
+        <button id="browse-gallery" class="flex row">
             Browse More
             <img src="assets/icons/arrow-right-b.svg" alt="">
         </button>
+
         <div class="gallery-container">
             <div class="img-container flex">
                 <img id="ghibli-img" src="assets/img/arrietty/karigurashi003.jpg" alt="">
                 <div class="ImgHovered flex col">
-                    <p class="image-name">Borrower Arrietty</p>
+                    <p class="image-name">Arrietty</p>
                     <div class="bttns flex row">
-                        <button class="view-bttn">
+                        <button id="view-bttn" class="view-bttn">
                             View
                         </button>
                         <button id="download-bttn" class="download-bttn">
@@ -182,6 +228,8 @@
                     </div>
                 </div>
             </div>
+
+            
             <div class="img-container flex">
                 <img id="ghibli-img" src="assets/img/from_poppy_hill/kokurikozaka002.jpg" alt="">
                 <div class="ImgHovered flex col">
@@ -311,7 +359,7 @@
             <div class="img-container flex">
                 <img id="ghibli-img" src="assets/img/i_can_hear_the_sea/umi001.jpg" alt="">
                 <div class="ImgHovered flex col ">
-                    <p class="image-name">I Can Hear The Sea</p>
+                    <p class="image-name">Ocean Waves</p>
                     <div class="bttns flex row">
                         <button class="view-bttn">
                             View
@@ -336,25 +384,33 @@
                     </div>
                 </div>
             </div>
+
+            <div class="view-container flex col">
+                <div class="nav">
+                    <div class="left"></div>
+                    <p class="set-title"></p>
+                    <div class="right flex row">
+                        <img id="view-download" src="assets/icons/download.svg" alt="">
+                    <img  id="view-close" src="assets/icons/x.svg" alt="">
+                    </div>
+                    
+                </div>
+                <img class="movieImage" src="" alt="">         
+            </div>
         </div>
     </section>
 
     <section class="merch-part flex col">
         <p class="maintext">
-            Browse Ghibli Merchandise Store
+            Studio Ghibli Collectibles
         </p>
-        <p class="subtext"> Find officially
-            licensed apparel, keepsakes, and collectibles inspired by the iconic worlds of Hayao Miyazaki and Studio
-            Ghibli.
-        </p>
-        <section class="collection flex col">
-            <p>Collection</p>
+       
             <div class="prod-container">
                 <div class="prod flex col">
-                    <img src="assets/img/merch/ghibli-elemental-tshirt-w.png" alt="" id="merch-item">
+                    <img src="assets/img/merch/0.jpg" alt="" id="merch-item">
                 <div class="prod-bttm flex col">
-                    <a id="merch-name">Ghibli Elemental T Shirt Unisex</a>
-                <p id="merch-price">&#8369;1000</p>
+                    <p class="merch-name"><a id="merch-name">My Neighbor Totoro Figurine</a></p>
+                <p id="merch-price">&#8369;700</p>
                 <button id="add-to-cart-bttn">
                     ADD TO CART
                 </button>
@@ -362,37 +418,46 @@
                 
                 </div>
                 <div class="prod flex col">
-                    <img src="assets/img/merch/ghibli-elemental-tshirt-w.png" alt="" id="merch-item">
+                    <img src="assets/img/merch/1.jpg" alt="" id="merch-item">
                     <div class="prod-bttm flex col">
-                        <a id="merch-name">Ghibli Elemental T Shirt Unisex</a>
-                    <p id="merch-price">&#8369;1000</p>
+                        <p class="merch-name"><a id="merch-name">Spirited Away Kaonashi (No face) figurine</a></p> 
+                    <p id="merch-price">&#8369;700</p>
                     <button id="add-to-cart-bttn">
                         ADD TO CART
                     </button>
                     </div>
                 </div>
                 <div class="prod flex col">
-                    <img src="assets/img/merch/ghibli-elemental-tshirt-w.png" alt="" id="merch-item">
+                    <img src="assets/img/merch/12.jpg" alt="" id="merch-item">
                     <div class="prod-bttm flex col">
-                        <a id="merch-name">Ghibli Elemental T Shirt Unisex</a>
-                    <p id="merch-price">&#8369;1000</p>
+                        <p class="merch-name">  <a id="merch-name">The Princess Mononoke Figurine</a> </p>
+                    <p id="merch-price">&#8369;700</p>
                     <button id="add-to-cart-bttn">
                         ADD TO CART
                     </button>
                     </div>
                 </div>
                 <div class="prod flex col">
-                    <img src="assets/img/merch/ghibli-elemental-tshirt-w.png" alt="" id="merch-item">
+                    <img src="assets/img/merch/2.jpg" alt="" id="merch-item">
                     <div class="prod-bttm flex col">
-                        <a id="merch-name">Ghibli Elemental T Shirt Unisex</a>
-                    <p id="merch-price">&#8369;1000</p>
+                        <p class="merch-name"><a id="merch-name ">The Boy And The Heron Warawara figurine </a></p> 
+                    <p id="merch-price">&#8369;700</p>
+                    <button id="add-to-cart-bttn">
+                        ADD TO CART
+                    </button>
+                    </div>
+                </div>
+                <div class="prod flex col">
+                    <img src="assets/img/merch/15.jpg" alt="" id="merch-item">
+                    <div class="prod-bttm flex col">
+                        <p class="merch-name"><a id="merch-name ">My Neighbor Totoro Figurine </a></p> 
+                    <p id="merch-price">&#8369;700</p>
                     <button id="add-to-cart-bttn">
                         ADD TO CART
                     </button>
                     </div>
                 </div>
             </div>
-        </section>
         <button id="shop-bttn" class="flex row">
             Shop Now
             <img src="assets/icons/arrow-right-b.svg" alt="">
@@ -426,6 +491,9 @@
         <img src="assets/icons/logo2.svg" alt="">
     </footer>
     <script src="scripts/index-script.js"></script>
+    <script src="scripts/login.js"></script>
+    <script src="scripts/movie_script.js"></script>
+
 </body>
 
 </html>

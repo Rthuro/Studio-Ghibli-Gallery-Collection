@@ -6,21 +6,61 @@
     <link rel="stylesheet" href="css/lading_page.css">
     <link rel="stylesheet" href="css/nav-footer.css">
     <link rel="icon" sizes="32x32" href="assets/icons/logo.svg" type="image/x-icon">
-    <title>Studio Ghibli</title>
+    <title>Studio Ghibli Collection</title>
 </head>
 <body>
+    <div id="login-create-container" class="log-in flex col">
+        <div id="login-container" class=" m-container flex col">
+            <p class="wc">WELCOME!</p>
+            <div class="container flex col">
+                <p>Email Address</p>
+                <input type="text" name="email" id="email" placeholder="email">
+            </div>
+            <div class="container flex col">
+                <p>Password</p>
+                <input type="text" name="password" id="password" placeholder="password">
+            </div>
+            <button id="bttn">Log in</button>
+            <a class="blue">Forget password?</a>
+            <p>Don't have an account? <a id="login-create" class="blue">Create one</a> </p>
+        </div>
+
+        <div id="create-container" class=" m-container flex col">
+            <p class="wc">Create an account</p>
+            <div class="container flex col">
+                <p>Username</p>
+                <input type="text" name="username" id="username" placeholder="username">
+            </div>
+            <div class="container flex col">
+                <p>Email Address</p>
+                <input type="text" name="email" id="email" placeholder="email">
+            </div>
+            <div class="container flex col">
+                <p>Password</p>
+                <input type="text" name="password" id="password" placeholder="password">
+            </div>
+            <div class="container flex col">
+                <p>Confirm Password</p>
+                <input type="text" name="confirm-password" id="confirm-password" placeholder="confirm password">
+            </div>
+            <button id="bttn">Create account</button>
+            <a class="blue">Forget password?</a>
+            <p>Have an account? <a id="create-login" class="blue">Log in</a> </p>
+        </div>
+    </div>
     <nav >
         <div class="left">
             <img src="assets/img/totoro-logo-c.png" width="38" height="38" alt="">
             <a  href="landing_page.html">Studio Ghibli Collection</a>
         </div>
         <div class="center">
-            <a id="home" href="index.html">Home</a>
-            <a id="works-gallery" href="pages/works_gallery.html">Works & Gallery</a>
-            <a id="shop" href="pages/shop.html">Shop</a>
+            <a id="home" href="index.php">Home</a>
+            <a id="works-gallery" href="pages/works_gallery.php">Works & Gallery</a>
+            <a id="shop" href="pages/shop.php">Shop</a>
         </div>
         <div class="right">
-            <a id="login" href="pages/login.html">Login</a>
+            <button id="login">Login</button>
+            <img id="cart" src="assets/icons/shopping-bag.svg" alt="">
         </div>
     </nav>
 
@@ -36,20 +76,16 @@
                 </button>
             </div>
         </header>
-
-        <section class="intro-gallery flex col">
-            <div class="black-bg"></div>
-            <p class="head">
-                <strong>Explore Our Gallery Collection</strong>
-            </p>
-                <p>
-                Dive into the enchanting universe of Studio Ghibli, where every frame tells a story and every character captures the imagination. Our Gallery Collection invites you to journey through the masterpieces crafted by the legendary Hayao Miyazaki and his talented team. From the whimsical landscapes of "My Neighbor Totoro" to the epic adventures of "Spirited Away," immerse yourself in the breathtaking beauty and timeless charm of Ghibli's animated films.
-            </p>
+        <section class="gallery flex col">
+            <p class="head"><strong>Explore Our Gallery Collection</strong></p>
+            <p> Dive into the enchanting universe of Studio Ghibli, where every frame tells a story and every character captures the imagination. Our Gallery Collection invites you to journey through the masterpieces crafted by the legendary Hayao Miyazaki and his talented team. From the whimsical landscapes of "My Neighbor Totoro" to the epic adventures of "Spirited Away," immerse yourself in the breathtaking beauty and timeless charm of Ghibli's animated films.</p>
+            <img src="assets/img/intro-g-bg0.png" alt="">
             <button id="gallery-bttn" class="flex row">
-                    Explore Gallery
-                    <img src="assets/icons/arrow-right-b.svg" alt="">
+                Explore Gallery
+                <img src="assets/icons/arrow-right-w.svg" alt="">
             </button>
         </section>
+
 
         <section class="merchandise flex col">
             <p class="head"><strong>Shop Ghibli Merchandise</strong></p>
@@ -119,14 +155,15 @@
         const shop_bttn = document.getElementById("shop-bttn");
         
         main_bttn.addEventListener('click', () => {
-            window.location.href = "index.html";
+            window.location.href = "index.php";
         });
         gallery_bttn.addEventListener('click', () => {
-            window.location.href = "pages/works_gallery.html";
+            window.location.href = "pages/works_gallery.php";
         });
         shop_bttn.addEventListener('click', () => {
-            window.location.href = "pages/shop.html";
+            window.location.href = "pages/shop.php";
         });
     </script>
+    <script src="scripts/login.js"></script>
 </body>
 </html>
