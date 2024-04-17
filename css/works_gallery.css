@@ -2,7 +2,10 @@
 :root{
     --fnt-clr-blue: #0a7cff;
     --fnt-clr-black: #222222;
+    --light-blk: rgba(0, 0, 0, 0.16);
+    --bx-shdw: 0px 1px 4px rgba(0, 0, 0, 0.16);
 }
+
 
 body{
     padding-top: 30px;

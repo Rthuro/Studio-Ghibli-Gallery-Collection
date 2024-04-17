@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --fnt-clr-blue: #0a7cff;
+    --fnt-clr-black: #222222;
+    --light-blk: rgba(0, 0, 0, 0.16);
+    --bx-shdw: 0px 1px 4px rgba(0, 0, 0, 0.16);
+}
+
+
+*{
+    font-family: "Poppins", sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color:inherit;
+    cursor: pointer;
+}
+button{
+    cursor: pointer;
+}
+.flex{
+    display: flex;
+}
+.row{
+    flex-direction: row;
+}
+.col{
+    flex-direction: column;
+}
+ul{
+    list-style: none;
+
+}
+
+body{
+    background-color: rgb(245, 245, 245);
+}
+
+p{
+    color: #fff;
+}
+.nav-container{
+    background-color: #0a6fe1;
+    height: 100vh;
+    width: fit-content;
+    position: fixed;
+    top:0;
+    left: 0;
+    bottom: 0;
+}
+
+.nav-container .logo{
+    justify-content: center;
+    align-items: center;
+    gap:8px;
+    padding: 16px 0;
+    background-color: #fff;
+}
+.nav-container .logo p{
+    font-size: 1.2rem;
+    color: var(--fnt-clr-black);
+    font-weight: 600;
+}
+
+.nav-container .nav {
+   padding:8px 16px;
+   justify-content: space-between;
+   align-items: center;
+   width:220px;
+   cursor: pointer;
+
+}
+.nav-container .nav:hover{
+    background-color: var(--light-blk);
+}
+.nav-container .nav .n-i-name{
+    gap:8px;
+}
+
+.nav-container section{
+    padding:8px 0;
+    margin:20px 0;
+}
+
+.nav-content section{
+    margin-left:8px;
+    background-color: #fff;
+    width: 85vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding:16px;
+    z-index: 1;
+}
+
+.nav-content section h1{
+    font-weight: 600;
+    font-size: 2rem;
+}
+.nav-content p{
+    color: black;
+}
+
+.nav-content .func{
+    font-size: 1.2rem;
+    font-weight: 500;
+    border-bottom: 1px solid var(--fnt-clr-black);
+    margin: 8px 0;
+}
+
+
+.nav-content .shop form, .nav-content .gallery form {
+    gap:8px;
+}
+.nav-content .shop form div, .nav-content .gallery form div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:8px;
+}
+.nav-content .shop form div input[type = "text"], .nav-content .gallery form div input[type = "text"]{
+    border-top:none;
+    border-left:none;
+    border-right:none;
+    outline: none;
+    border-bottom: 1px solid var(--fnt-clr-black);
+    width: 200px;
+    padding-left: 8px;
+}
+.nav-content .shop form div input[type = "checkbox"]{
+    transform: scale(1.5);
+}
+.nav-content .shop .bttns, .nav-content .gallery .bttns{
+    margin:16px 0;
+}
+.nav-content .shop .bttns button, .nav-content .gallery .bttns button{
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+.nav-content .shop .bttns .add, .nav-content .gallery .bttns .add{
+    color:#fff;
+    background-color: #20993c;
+}
+.nav-content .shop .bttns .cancel, .nav-content .gallery .bttns .cancel{
+    color:#fff;
+    background-color: #ff4e4e;
+}
+.nav-content .shop .bttns .add:hover, 
+.nav-content .gallery .bttns .add:hover{
+    background-color: #1e8035;
+}
+.nav-content .shop .bttns .cancel:hover, 
+.nav-content .gallery .bttns .cancel:hover{
+    background-color: #ea2f2f;
+}
+
+.nav-content .gallery .plot{
+    align-items: start;
+}
+
+.nav-content .gallery form div textarea{
+    padding:8px;
+}
