@@ -21,7 +21,7 @@
        <div class="works-list-container">
            <div class="film flex col">
                <img class="film-poster" src="../assets/img/Official_poster/arrietty-poster.jpg" alt="">
-               <p class="film-title">Borrower Arrietty</p>
+               <p class="film-title">Arrietty</p>
            </div>
            <div class="film flex col">
                <img class="film-poster" src="../assets/img/Official_poster/aya1.jpg" alt="">
