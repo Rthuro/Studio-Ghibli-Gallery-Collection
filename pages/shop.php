@@ -9,29 +9,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" sizes="32x32" href="../assets/icons/logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../css/nav-footer.css">
     <link rel="stylesheet" href="../css/store.css">
     <title>Studio Ghibli | Store</title>
 </head>
 
-<body>
+<body >
     <h1>Studio Ghibli Merch Collections</h1>
- <div class="search-fil flex row">
-    <div class="search_container flex">
-        <input type="text" name="search" id="search" placeholder="Search">
-       <img id="search-icon" src="../assets/icons/search.svg" alt="">
-    </div>
-        <a href="#apparel-a">Apparel</a>
-        <a href="#collectibles-a">Collectibles</a>
-        <a href="#stationery-a">Stationery</a>
-    </div>
-    
-    <section id="all" class="all">
-      <p class="name">All Collections</p>
-      <div class="product-container">
-            <div class="prod flex col">
-                    <img src="../assets/img/merch/0.jpg" alt="" id="merch-item">
+ 
+     <header class="flex">
+        <div class="s-sdbr row">
+                <img src="../assets/icons/menu.svg" alt="">
+                Show Sidebar
+           </div>
+             <div class="search-container flex row">
+            <input type="text" name="search" id="search" placeholder="Search">
+            <img src="../assets/icons/search.svg" alt="">
+        </div>
+       
+        <div class="sort-container flex row">
+            <label for="sorting">Sort by: </label>
+            <select name="sorting" id="sorting">
+                <option value="">Default Sorting</option>
+                <option value="">Price (Low to High)</option>
+                <option value="">Price (High to Low)</option>
+                <option value="">Popularity</option>
+                <option value="">New Arrivals</option>
+                <option value="">Average Rating</option>
+            </select>
+        </div>
+         
+     </header>    
+     
+     <section class="shop-bttm flex row">
+        <div class="filter-container col">
+            <div class="fil-price flex col">
+                <label for="f-price">Filter By Price</label>
+                <input type="range" id="price-slider" min="0" max="5000" value="0,5000">
+               <div class="p-val flex row">
+                <span id="min-price">0</span>  <span id="max-price">5000</span>
+               </div>
+               <div class="f-bttn flex row">
+                    <button id="f-bttn">Filter</button>
+                    <button id="f-clear">Clear</button>
+               </div>
+               
+            </div>
+            <div class="categories flex col">
+                <p>Catergories</p>
+                <a href="">Apparel</a>
+                <a href="">Collectibles</a>
+                <a href="">Stationery</a>
+            </div>
+        </div>
+        <div class="prod-container ">
+                 <div class="prod flex col">
+                    <img  src="../assets/img/merch/0.jpg" alt="" id="merch-item">
                 <div class="prod-bttm flex col">
-                    <p class="merch-name"><a id="merch-name">My Neighbor Totoro Figurine</a></p>
+                    <p id="product-name" class="merch-name"><a id="merch-name">My Neighbor Totoro Figurine</a></p>
                 <p id="merch-price">&#8369;700</p>
                 <button id="add-to-cart-bttn">
                     ADD TO CART
@@ -79,58 +114,111 @@
                     </button>
                     </div>
                 </div>
-            </div>
-    </section>
-    <div id="apparel-a" class="a"></div>
-    <section id="apparel" class="apparel flex col">
-        <p class="name">Apparel</p>
-        <div class="product-container">
-            <div class="prod flex col">
-                <img src="../assets/img/merch/ghibli-elemental-tshirt-b.png" alt="" id="merch-item">
-                <div class="prod-bttm flex col">
-                    <p class="merch-name"><a id="merch-name">Ghibli Elemental Shirt</a></p>
-                    <p id="merch-price">&#8369;1000</p>
-                    <button id="add-to-cart-bttn">
-                        ADD TO CART
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-    <div id="collectibles-a" class="a"></div>
-    <section id="collectibles" class="collectibles flex col">
-        <p class="name">Collectibles</p>
-        <div class="product-container">
-            <div class="prod flex col">
-                <img src="../assets/img/merch/0.jpg" alt="" id="merch-item">
-                <div class="prod-bttm flex col">
-                    <p class="merch-name"><a id="merch-name">My Neighbor Totoro Figurine</a></p>
+                <div class="prod flex col">
+                    <img src="../assets/img/merch/9.jpg" alt="" id="merch-item">
+                    <div class="prod-bttm flex col">
+                        <p class="merch-name">Spirited Away Kaonashi (No face) figurine </p> 
                     <p id="merch-price">&#8369;700</p>
                     <button id="add-to-cart-bttn">
                         ADD TO CART
                     </button>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
-    <div id="stationery-a" class="a"></div>
-    <section id="stationery" class="stationery flex col">
-        <p class="name">Stationery</p>
-        <div class="product-container">
-            <div class="prod flex col">
-                <img src="../assets/img/merch/0.jpg" alt="" id="merch-item">
-                <div class="prod-bttm flex col">
-                    <p class="merch-name"><a id="merch-name">My Neighbor Totoro Figurine</a></p>
+                <div class="prod flex col">
+                    <img src="../assets/img/merch/2.jpg" alt="" id="merch-item">
+                    <div class="prod-bttm flex col">
+                        <p class="merch-name">The Boy And The Heron Warawara figurine </p> 
                     <p id="merch-price">&#8369;700</p>
                     <button id="add-to-cart-bttn">
                         ADD TO CART
                     </button>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
-</body>
+                <div class="prod flex col">
+                    <img src="../assets/img/merch/15.jpg" alt="" id="merch-item">
+                    <div class="prod-bttm flex col">
+                        <p class="merch-name">My Neighbor Totoro Figurine </p> 
+                    <p id="merch-price">&#8369;700</p>
+                    <button id="add-to-cart-bttn">
+                        ADD TO CART
+                    </button>
+                    </div>
+                </div>
+                <div class="prod flex col">
+                    <img src="../assets/img/merch/15.jpg" alt="" id="merch-item">
+                    <div class="prod-bttm flex col">
+                        <p class="merch-name">My Neighbor Totoro Figurine </p> 
+                    <p id="merch-price">&#8369;700</p>
+                    <button id="add-to-cart-bttn">
+                        ADD TO CART
+                    </button>
+                    </div>
+                </div>
+                <div class="prod flex col">
+                    <img src="../assets/img/merch/9.jpg" alt="" id="merch-item">
+                    <div class="prod-bttm flex col">
+                        <p class="merch-name">Spirited Away Kaonashi (No face) figurine</p> 
+                    <p id="merch-price">&#8369;700</p>
+                    <button id="add-to-cart-bttn">
+                        ADD TO CART
+                    </button>
+                    </div>
+                </div>
+                <div class="prod flex col">
+                    <img src="../assets/img/merch/2.jpg" alt="" id="merch-item">
+                    <div class="prod-bttm flex col">
+                        <p class="merch-name">The Boy And The Heron Warawara figurine </p> 
+                    <p id="merch-price">&#8369;700</p>
+                    <button id="add-to-cart-bttn">
+                        ADD TO CART
+                    </button>
+                    </div>
+                </div>
+                <div class="prod flex col">
+                    <img src="../assets/img/merch/15.jpg" alt="" id="merch-item">
+                    <div class="prod-bttm flex col">
+                        <p class="merch-name">My Neighbor Totoro Figurine</p> 
+                    <p id="merch-price">&#8369;700</p>
+                    <button id="add-to-cart-bttn">
+                        ADD TO CART
+                    </button>
+                    </div>
+                </div>
+          </div>
+     </section>
+     <div class="pagination flex row">
+        <a href="">1</a>
+        <a href="">2</a>
+        <a href="">3</a>
+    </div>
 
+    <div id="h-sidebar" class="  col">
+        <div class="filter-container flex col">
+            <div class="fil-price flex col">
+                    <label for="f-price">Filter By Price</label>
+                    <input type="range" id="price-slider" min="0" max="5000" value="0,5000">
+                <div class="p-val flex row">
+                    <span id="min-price">0</span>  <span id="max-price">5000</span>
+                </div>
+                <div class="f-bttn flex row">
+                        <button id="f-bttn">Filter</button>
+                        <button id="f-clear">Clear</button>
+                </div>
+                
+                </div>
+                <div class="categories flex col">
+                    <p>Catergories</p>
+                    <a href="">Apparel</a>
+                    <a href="">Collectibles</a>
+                    <a href="">Stationery</a>
+                </div>
+        </div>
+    </div>
+
+   
+
+     <script src="../scripts/shop.js"></script>
+</body>
 </html>
 
 <?php

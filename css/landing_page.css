@@ -56,6 +56,7 @@ body{
     z-index: 1;
     background: url(../assets/img/ghib.png) no-repeat center;
     background-size:cover;
+    padding-top: 50px;
 }
 .bg-content{
     width: 100%;
@@ -90,8 +91,6 @@ body{
     font-weight: 800;
     color: #fff;
     width:100%;
-    height: 80px;
-    margin:3% 0 2% 0;
 }
 .headline span{
     color:#0781c8;
@@ -111,20 +110,20 @@ section{
     width:auto;
     height: 700px;
     gap:16px;
-    margin: 0 120px;
+    margin: 20px 120px;
     justify-content: center;
     align-items: center;
 }
 
-
 section p{
     text-align: center;
-    color:#3a9db4;
+    color:var(--fnt-clr-blue);
     text-wrap:wrap;
     word-wrap:break-word;
 }
 
 section p strong{
+    color:#3a9db4;
     font-size: 2.5rem;
     font-weight: 700;
     display: block;
@@ -154,9 +153,9 @@ section p strong{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding:16px;
+    padding:16px 0;
     box-shadow:0px 1px 4px rgba(0, 0, 0, 0.16) ;
-    height: 280px;
+    height: 200px;
     border-radius: 8px;
     overflow: hidden;
     background-color: #fff;
@@ -191,13 +190,15 @@ section p strong{
 }
 .merchandise button img, .gallery  button img{
     width:20px;
+    height: auto;
 }
 .merchandise button:hover , .gallery  button:hover{
     background-color: #3b3b3b ;
 }
 
 .msg{
-    height: 50vh;
+    flex-direction: row;
+    height:  fit-content;
 }
 .msg img{
     width:auto;
@@ -213,4 +214,139 @@ section p strong{
     text-align: center;
     font-weight: 500;
      margin-bottom: 8px;
+}
+
+@media screen and (min-width:0px) and (max-width:750px){ 
+    .bg{
+        height: 450px;
+    }
+    .headline{
+       font-size: 2rem;
+       width:400px;
+    }
+    .context .headline-2{
+        font-size: 0.8rem;
+        width:400px;
+     }
+    
+    .bg button{
+        font-size: 0.9rem;
+    }
+    .bg button img{
+        height: 16px;
+    }
+    section{
+        padding: 0 16px;
+        margin:24px 0;
+        height: fit-content;
+    }
+    section p strong{
+        font-size: 1.8rem;
+    }
+    
+    section p{
+        font-size: 0.8rem;
+    }
+    .gallery img{
+        width: auto;
+       height: 150px;
+    }
+    .merchandise .sub{
+        grid-template-rows: repeat(3, auto);
+        grid-template-columns: auto;
+        width: fit-content;
+        gap:8px;
+    }
+    .merchandise .sub .container{
+        width: 350px;
+        height: 200px;
+    }
+    .merchandise .sub .container .text1{
+        font-size: 1rem;
+    }
+    .merchandise .sub .container .text2{
+        font-size: 0.7rem;
+    }
+    .msg{
+        flex-direction: column;
+    }
+    .msg img{  
+    height: 30vh;
+    }
+    
+    .msg div p:first-child{
+        font-size: 1.2rem;
+        font-weight: 700;
+    }
+    .msg div p{
+        font-size: 0.7rem;
+    }
+}
+
+@media screen and (min-width:750px) and (max-width: 1220px){ 
+    .bg{
+        height: 600px;
+    }
+    .headline{
+       font-size: 2.5rem;
+       width:auto;
+    }
+    .context .headline-2{
+        font-size: 1rem;
+        width:auto;
+     }
+    
+    .bg button{
+        font-size: 1rem;
+    }
+    .bg button img{
+        height: 24px;
+    }
+    section{
+        padding: 0 16px;
+        margin:24px 0;
+        height: fit-content;
+    }
+    section p strong{
+        font-size: 1.8rem;
+    }
+    
+    section p{
+        font-size: 0.8rem;
+    }
+    .gallery img{
+        width: auto;
+       height: 300px;
+    }
+    .merchandise .sub{
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: auto auto;
+        width: fit-content;
+        gap:8px;
+    }
+    .merchandise .sub .container{
+        width: 350px;
+        height: 250px;
+    }
+    .merchandise .sub .container .text1{
+        font-size: 1rem;
+    }
+    .merchandise .sub .container .text2{
+        font-size: 0.7rem;
+    }
+    .msg{
+        flex-direction: row;
+    }
+    .msg img{  
+    height: 30vh;
+    }
+    
+    .msg div p:first-child{
+        font-size: 1.4rem;
+        font-weight: 700;
+    }
+    .msg div p{
+        font-size: 0.8rem;
+    }
+
 }

@@ -112,7 +112,9 @@ h1{
 }
 
 /* ----- Second Section -----*/
-
+.gallery-part .maintext, .merch-part .maintext, .works  p{
+    text-align: center;
+}
 .works{
     padding:54px 120px;
     height: auto;
@@ -160,7 +162,7 @@ h1{
     width: fit-content;
     overflow: hidden;
     height: 40px;
-    word-break: break-all;
+    word-break: normal;
     word-wrap: break-word;
     padding: 0 2px;
 }
@@ -221,6 +223,7 @@ h1{
 
 }
 .gallery-part .subtext{
+    text-align: center;
     color:#0898eb;
 }
 
@@ -255,7 +258,7 @@ h1{
     grid-template-columns:repeat(4,auto) ;
     grid-template-rows:auto auto auto;
     gap:8px;
-    width: 85%;
+    width: fit-content;
     height: auto;
     overflow: hidden;
     margin-top: 24px;
@@ -325,6 +328,7 @@ h1{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: start;
     background-color: #222222c6;
     top: 0;
     left: 0;
@@ -399,7 +403,7 @@ h1{
     align-items: center;
     justify-content: center;
     width: 100%;
-    height:700px;
+    height:fit-content;
     background: var(--white-bg);
     background-size: var(--bg-size-white-bg);
 }
@@ -467,4 +471,202 @@ h1{
 }
  .prod .prod-bttm #add-to-cart-bttn:hover{
     background-color: #f00606b1;
+}
+
+@media screen and (min-width:0px) and (max-width:750px){
+    .bg{
+        height: 450px;
+    }
+    .headline{
+       font-size: 1.2rem;
+       width:400px;
+    }
+    .context .headline-2{
+        font-size: 0.6rem;
+        width:400px;
+     }
+      .gallery-part .subtext{
+        font-size: 0.6rem;
+        width:400px;
+    }
+    .bg button{
+        font-size: 1rem;
+    }
+    .works{
+        padding: 22px 0;
+        
+    }
+    .works  p{
+        width: 100%;
+    }
+    .gallery-part .maintext, .merch-part .maintext, .works  p{
+        font-size: 1.4rem;
+    }
+    .works .works-list-container{
+        grid-template-columns: repeat(4,auto);
+        width: fit-content;
+        height: 530px;
+       padding: 8px 0 ;
+    }
+    .works .works-list-container.showmore{
+        height: 1350px;
+    }
+    .works .works-list-container .film{
+        width: 90px;
+        height: 180px;
+    }
+    .works .works-list-container .film p{
+        font-size: 0.6rem;
+        height: auto;
+    }
+    
+    .works .works-list-container .film img{
+        width: 100%;
+        height: auto;
+       
+    }
+    .gallery-part{
+       margin:0;
+        height: fit-content;
+    }
+    .gallery-part .gallery-container{
+        grid-template-columns:repeat(2,auto) ;
+        grid-template-rows:repeat(6,auto);
+    }
+
+    .img-container img{
+        height: 100px;
+    }
+    .img-container .ImgHovered{
+        padding: 0;
+        gap:0;
+    }
+    .img-container .ImgHovered p{
+        font-size: 0.8rem;
+    }
+    .img-container .ImgHovered .bttns button{
+        font-size: 0.6rem;
+        padding: 4px 16px;
+        width: fit-content;
+        margin:4px 0;
+    }
+    .view-container .movieImage {
+        width: auto;
+        height: 200px;
+    }
+    .view-container .nav .set-title{
+        font-size: 1rem;
+    }
+    .view-container .right img{
+        width: 32px;
+    }
+    .merch-part{
+        margin-top: 24px;
+    }
+    .prod-container{
+        align-items: center;
+        grid-template-columns: repeat(2,auto);
+        gap:4px;
+    }
+    .prod-container .prod{
+        width: 180px;
+        height: 250px;
+        justify-self: center;
+    }
+    .prod-container .prod .prod-bttm .merch-name{
+        font-size: 0.6rem;
+        width: auto;
+    }
+    .prod-container .prod img{
+        width: 100px;
+    }
+   
+
+}
+
+@media screen and (min-width:750px) and (max-width: 1220px){
+    .bg{
+        height: 500px;
+    }
+    .headline{
+       font-size: 1.8rem;
+       width:800px;
+    }
+    .context .headline-2{
+        font-size: 1.1rem;
+        width:750px;
+     }
+      .gallery-part .subtext{
+        font-size: 0.8rem;
+        width:450px;
+    }
+    .bg button{
+        font-size: 1rem;
+    }
+    .works{
+        padding: 22px 0;
+        
+    }
+    .works  p{
+        width: 100%;
+    }
+    .gallery-part .maintext, .merch-part .maintext, .works  p{
+        font-size: 2rem;
+    }
+    .works .works-list-container{
+        grid-template-columns: repeat(5,auto);
+        width: fit-content;
+        height: 650px;
+       padding: 8px ;
+    }
+    .works .works-list-container.showmore{
+        height: 1200px;
+    }
+    .works .works-list-container .film{
+        width: 130px;
+        height: 220px;
+    }
+    .works .works-list-container .film p{
+        font-size: 0.8rem;
+        height: auto;
+    }
+    
+    .works .works-list-container .film img{
+        width: 100%;
+        height: auto;
+       
+    }
+    .gallery-part{
+        
+       margin:0;
+        height: fit-content;
+    }
+    .gallery-part .gallery-container{
+        grid-template-columns:repeat(3,auto) ;
+        grid-template-rows:repeat(3,auto);
+    }
+
+    .img-container img{
+        height: 120px;
+    }
+    .img-container .ImgHovered p{
+        font-size: 1rem;
+    }
+    .img-container .ImgHovered .bttns button{
+        font-size: 0.6rem;
+    }
+    .view-container .movieImage {
+        width: auto;
+        height: 450px;
+    }
+    .merch-part{
+        margin-top: 24px;
+    }
+    .prod-container{
+        grid-template-columns: repeat(3,225px);
+    }
+    .prod-container .prod img{
+        height: 150px;
+    }
+
 }

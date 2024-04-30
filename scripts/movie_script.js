@@ -69,3 +69,12 @@ const downloadButtons = document.querySelectorAll('#download-bttn');
     });
   });
 
+  
+  let storedTitle = localStorage.getItem("movietitle");
+  let storedPosterImage = localStorage.getItem('filmPosterImg'); 
+
+  const setTitle = document.getElementById('movie-title');
+
+  document.getElementById('poster').src = storedPosterImage;
+
+  setTitle.innerHTML = storedTitle;

@@ -21,14 +21,21 @@ showMoreBttn.addEventListener('click', () => {
 
    });
 
-const ghib_fil = document.getElementById('ghib-filter');
-const ghib_fil_dropdown = document.getElementById('drop-down');
 
 
-let isOpen = false; 
+   const worksListContainer = document.querySelectorAll('.works .works-list-container .film');
+   
 
-ghib_fil.addEventListener('click', () => {
-  isOpen = !isOpen;
-  ghib_fil_dropdown.classList.toggle('active');
+worksListContainer.forEach(container => {
+  container.addEventListener( 'click', () =>{
+    let title = container.querySelector('.film-title').textContent;
+    let posterImage = container.querySelector(' .film-poster').src; 
+
+    localStorage.setItem("filmPosterImg", posterImage);
+      localStorage.setItem("movietitle", title);
+
+      window.location.href = "works_site.php";
+
+}); 
 });
 

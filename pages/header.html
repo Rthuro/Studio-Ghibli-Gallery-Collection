@@ -1,3 +1,4 @@
+
 <link rel="stylesheet" href="../css/nav-footer.css">
 
     <div id="login-create-container" class="log-in flex col">
@@ -39,19 +40,59 @@
             <p>Have an account? <a id="create-login" class="blue">Log in</a> </p>
         </div>
     </div>
+   
+
     <nav >
         <div class="left">
-            <img src="../assets/img/totoro-logo-c.png" width="38" height="38" alt="">
-            <a  href="../landing_page.html">Studio Ghibli Collection</a>
+            
+            <div class="m-v-hidden flex row">
+                  <img id="menu-bttn" src="../assets/icons/menu.svg" alt=""> 
+            </div>
+            <div class="flex row">
+                <img src="../assets/img/totoro-logo-c.png" width="38" height="38" alt="">
+            <a  href="landing_page.php">Studio Ghibli Collection</a> 
+            </div>
+           
         </div>
         <div class="center">
-            <a id="home" href="../index.php">Home</a>
+            <a id="home" href="index.php">Home</a>
             <a id="works-gallery" href="works_gallery.php">Works & Gallery</a>
             <a id="shop" href="shop.php">Shop</a>
         </div>
         <div class="right">
             <button id="login">Login</button>
+            <div class="cart-wrapper flex col">
             <img id="cart" src="../assets/icons/shopping-bag.svg" alt="">
+            <div class="h-cart col">
+                <img src="../assets/icons/cart (1).png" alt="">
+                <p>Your Cart is Currently Empty</p>
+            </div>
+            </div>
+            
         </div>
     </nav>
+
+    <div id="h-wrapper">
+        <div id="h-c" class="hidden-c flex col">
+        <a id="home" href="index.php">Home</a>
+        <a id="works-gallery" href="works_gallery.php">Works & Gallery</a>
+        <a id="shop" href="shop.php">Shop</a>
+        <a id="hid-login">Login</a>
+    </div>
+    </div>
+    
     <script src="../scripts/login.js"></script>
+    <script>
+        const cartBttn = document.getElementById('cart');
+const cartContainer = document.querySelector('.h-cart');
+
+cartBttn.addEventListener('click', () => {
+  cartContainer.style.display = cartContainer.style.display === 'none'? 'flex' : 'none';
+});
+
+document.addEventListener('click', (event) => {
+  if (!cartContainer.contains(event.target) &&!cartBttn.contains(event.target)) {
+    cartContainer.style.display = 'none';
+  }
+});
+    </script>

@@ -9,20 +9,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/home.css">
     <link rel="stylesheet" href="../css/nav-footer.css">
-    <link rel="stylesheet" href="../css/works_gallery.css">
     <link rel="icon" sizes="32x32" href="../assets/icons/logo.svg" type="image/x-icon">
-    <title>Studio Ghibli | Works and Gallery</title>
+    <title>Studio Ghibli</title>
 </head>
 
-<body>
+<body>    
+
+    <header class="bg flex col">
+        <div class="bg-content flex col">
+            <div class="context flex col">
+                <h1 class="headline">The Art of Ghibli: A Gallery Collection & Official Merchandise</h1>
+                <p class="headline-2">Find officially licensed apparel, keepsakes, and collectibles inspired by the iconic worlds of Hayao Miyazaki and Studio Ghibli.</p>
+            </div>
+            <button id="banner-bttn" class="flex row">
+                Shop Now
+                <img src="../assets/icons/arrow-up-right-w.svg" alt="">
+            </button>
+        </div>
+    </header>
+
 
     <section class="works flex col">
-        <p>Studio Ghibli Works</p>
+         <p>Studio Ghibli Works</p>
         <div class="works-list-container">
             <div class="film flex col">
                 <img class="film-poster" src="../assets/img/Official_poster/arrietty-poster.jpg" alt="">
-                <p class="film-title">Arrietty</p>
+                <p class="film-title">Borrower Arrietty</p>
             </div>
             <div class="film flex col">
                 <img class="film-poster" src="../assets/img/Official_poster/aya1.jpg" alt="">
@@ -42,7 +56,7 @@
             </div>
             <div class="film flex col">
                 <img class="film-poster" src="../assets/img/Official_poster/kiki.jpg" alt="">
-                <p class="film-title">Kiki's Delivery Service </p>
+                <p class="film-title">Kiki's Delivery Service	</p>
             </div>
             <div class="film flex col">
                 <img class="film-poster" src="../assets/img/Official_poster/marnie.jpg" alt="">
@@ -98,7 +112,7 @@
             </div>
             <div class="film flex col">
                 <img class="film-poster" src="../assets/img/Official_poster/tbath.jpg" alt="">
-                <p class="film-title">The Boy and the Heron </p>
+                <p class="film-title">The Boy and the Heron	</p>
             </div>
             <div class="film flex col">
                 <img class="film-poster" src="../assets/img/Official_poster/totoro.jpg" alt="">
@@ -117,8 +131,7 @@
                 <p class="film-title">My Neighbors the Yamadas</p>
             </div>
             <div class="film flex col">
-                <img class="film-poster" src="../assets/img/grave_of_the_firelies/grave-of-the-fireflies-poster.jpg"
-                    alt="">
+                <img class="film-poster" src="../assets/img/grave_of_the_firelies/grave-of-the-fireflies-poster.jpg" alt="">
                 <p class="film-title">Grave of the Fireflies</p>
             </div>
         </div>
@@ -129,44 +142,21 @@
         <button id="g-show-less-bttn" class="flex row">
             Show less
         </button>
-
     </section>
 
+    <section class="gallery-part flex col">
+        <p class="maintext">
+            Studio Ghibli Gallery Collection
+        </p>
+        <p class="subtext">
+            This immersive online gallery celebrates the breathtaking artistry and unforgettable moments from every
+            Ghibli film.
+        </p>
+        <button id="browse-gallery" class="flex row">
+            Browse More
+            <img src="../assets/icons/arrow-right-b.svg" alt="">
+        </button>
 
-    <section class="search-filter flex ">
-        <div class="search_container flex ">
-            <input type="text" name="search" id="search" placeholder="Search">
-            <img id="search-icon" src="../assets/icons/search.svg" alt="">
-        </div>
-        <select>
-            <?php
-             $conn = mysqli_connect("localhost", "root", "", "studio_ghibli");
-            
-                            if (!$conn) {
-                                        die("Connection failed: " . mysqli_connect_error());
-                                        }
-                                    
-
-                                        $sql = "SELECT title FROM films";
-                                        $result = mysqli_query($conn, $sql);
-                                        
-                                        echo "<option disabled selected>Studio Ghibli Works</option>";
-                                        if (mysqli_num_rows($result) > 0) { 
-                                        while ($row = mysqli_fetch_assoc($result)) {
-                                            $film_name = $row['title'];
-                                            echo "<option value='$film_name'>$film_name</option>";
-                                        }
-                                        } else {
-                                        echo "No films found";
-                                        }
-
-                                        mysqli_close($conn);
-                                 ?>
-        </select>
-
-    </section>
-
-    <div class="g-cont-wrapper">
         <div class="gallery-container">
             <div class="img-container flex">
                 <img id="ghibli-img" src="../assets/img/arrietty/karigurashi003.jpg" alt="">
@@ -183,6 +173,7 @@
                 </div>
             </div>
 
+            
             <div class="img-container flex">
                 <img id="ghibli-img" src="../assets/img/from_poppy_hill/kokurikozaka002.jpg" alt="">
                 <div class="ImgHovered flex col">
@@ -344,30 +335,105 @@
                     <p class="set-title"></p>
                     <div class="right flex row">
                         <img id="view-download" src="../assets/icons/download.svg" alt="">
-                        <img id="view-close" src="../assets/icons/x.svg" alt="">
+                    <img  id="view-close" src="../assets/icons/x.svg" alt="">
                     </div>
-
+                    
                 </div>
-                <img class="movieImage" src="" alt="">
+                <img class="movieImage" src="" alt="">         
             </div>
-        </div>                                
+        </div>
+    </section>
 
-    </div>
-  
-    
+    <section class="merch-part flex col">
+        <p class="maintext">
+            Studio Ghibli Collectibles
+        </p>
+       
+            <div class="prod-container">
+                <div class="prod flex col">
+                    <img src="../assets/img/merch/0.jpg" alt="" id="merch-item">
+                <div class="prod-bttm flex col">
+                    <p class="merch-name">My Neighbor Totoro Figurine</p>
+                <p id="merch-price">&#8369;700</p>
+                <button id="add-to-cart-bttn">
+                    ADD TO CART
+                </button>
+                </div>
+                
+                </div>
+                <div class="prod flex col">
+                    <img src="../assets/img/merch/1.jpg" alt="" id="merch-item">
+                    <div class="prod-bttm flex col">
+                        <p class="merch-name">Spirited Away Kaonashi (No face) figurine</p> 
+                    <p id="merch-price">&#8369;700</p>
+                    <button id="add-to-cart-bttn">
+                        ADD TO CART
+                    </button>
+                    </div>
+                </div>
+                <div class="prod flex col">
+                    <img src="../assets/img/merch/12.jpg" alt="" id="merch-item">
+                    <div class="prod-bttm flex col">
+                        <p class="merch-name"> The Princess Mononoke Figurine </p>
+                    <p id="merch-price">&#8369;700</p>
+                    <button id="add-to-cart-bttn">
+                        ADD TO CART
+                    </button>
+                    </div>
+                </div>
+                <div class="prod flex col">
+                    <img src="../assets/img/merch/2.jpg" alt="" id="merch-item">
+                    <div class="prod-bttm flex col">
+                        <p class="merch-name">The Boy And The Heron Warawara figurine </p> 
+                    <p id="merch-price">&#8369;700</p>
+                    <button id="add-to-cart-bttn">
+                        ADD TO CART
+                    </button>
+                    </div>
+                </div>
+                <div class="prod flex col">
+                    <img src="../assets/img/merch/15.jpg" alt="" id="merch-item">
+                    <div class="prod-bttm flex col">
+                        <p class="merch-name">My Neighbor Totoro Figurine </p> 
+                    <p id="merch-price">&#8369;700</p>
+                    <button id="add-to-cart-bttn">
+                        ADD TO CART
+                    </button>
+                    </div>
+                </div>
+            </div>
+        <button id="shop-bttn" class="flex row">
+            Shop Now
+            <img src="../assets/icons/arrow-right-b.svg" alt="">
+        </button>
+    </section>
 
-    <div class="pagination flex row">
-        <a href="">1</a>
-        <a href="">2</a>
-        <a href="">3</a>
-    </div>
+    <script  src="../scripts/index-script.js"></script>
+    <script src="../scripts/login.js"></script>
+    <script src="../scripts/movie_script.js"></script>
+    <script>
+        const products = document.querySelectorAll('.prod-container .prod');
 
 
-    <script src="../scripts/movie_script.js"></script>                                    
-    <script type="text/javascript" src="../scripts/works_gallery.js"></script>
+products.forEach(container => {
+  container.addEventListener('click', () => {
+    const productImage = container.querySelector('.prod #merch-item').src; 
+    const productName = container.querySelector('.prod-bttm .merch-name').textContent; 
+    const productPrice = container.querySelector('.prod-bttm  #merch-price').textContent;
+
+
+    localStorage.setItem("productImage", productImage);
+     localStorage.setItem("productName", productName);
+     localStorage.setItem("productPrice", productPrice);
+
+   window.location.href = "product_page.php";
+  });
+});
+    </script>
 </body>
 
 </html>
+
 
 <?php
 include("footer.html");
