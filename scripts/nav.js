@@ -47,6 +47,7 @@ create_to_login.addEventListener('click', () =>{
 
 const menu_bttn = document.getElementById('menu-bttn');
 const menu_cont = document.getElementById('h-wrapper');
+
 menu_bttn.addEventListener('click', () => {
     menu_cont.style.display = menu_cont.style.display === 'none' ? 'flex' : 'none';
 });
