@@ -177,6 +177,7 @@ select option{
     height: auto;
     overflow: hidden;
     padding:8px;
+    margin-bottom: 50px;
 }
 
 .img-container{
@@ -187,6 +188,7 @@ select option{
     height: fit-content;
     overflow: hidden;
     transition: transform 0.15s ease-in-out;
+    
 }
 .img-container img{
     width: auto;
