@@ -1,6 +1,4 @@
-<?php
-    include('header.html');
-?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,6 +11,82 @@
     <title>Studio Ghibli Collection</title>
 </head>
 <body>
+    <div id="login-create-container" class="log-in flex col">
+        <div id="login-container" class=" m-container flex col">
+            <p class="wc">WELCOME!</p>
+            <div class="container flex col">
+                <p>Email Address</p>
+                <input type="text" name="email" id="email" placeholder="email">
+            </div>
+            <div class="container flex col">
+                <p>Password</p>
+                <input type="text" name="password" id="password" placeholder="password">
+            </div>
+            <button id="bttn">Log in</button>
+            <a class="blue">Forget password?</a>
+            <p>Don't have an account? <a id="login-create" class="blue">Create one</a> </p>
+        </div>
+
+        <div id="create-container" class=" m-container flex col">
+            <p class="wc">Create an account</p>
+            <div class="container flex col">
+                <p>Username</p>
+                <input type="text" name="username" id="username" placeholder="username">
+            </div>
+            <div class="container flex col">
+                <p>Email Address</p>
+                <input type="text" name="email" id="email" placeholder="email">
+            </div>
+            <div class="container flex col">
+                <p>Password</p>
+                <input type="text" name="password" id="password" placeholder="password">
+            </div>
+            <div class="container flex col">
+                <p>Confirm Password</p>
+                <input type="text" name="confirm-password" id="confirm-password" placeholder="confirm password">
+            </div>
+            <button id="bttn">Create account</button>
+            <a class="blue">Forget password?</a>
+            <p>Have an account? <a id="create-login" class="blue">Log in</a> </p>
+        </div>
+    </div>
+    <nav >
+        <div class="left">
+            <div class="m-v-hidden flex row">
+                  <img id="menu-bttn" src="../assets/icons/menu.svg" alt=""> 
+            </div>
+            <div class="flex row">
+                <img src="../assets/img/totoro-logo-c.png" width="38" height="38" alt="">
+            <a  href="landing_page.html">Studio Ghibli Collection</a> 
+            </div>
+        
+        </div>
+        <div class="center">
+            <a id="home" href="index.html">Home</a>
+            <a id="works-gallery" href="works_gallery.html">Works & Gallery</a>
+            <a id="shop" href="shop.html">Shop</a>
+        </div>
+        <div class="right">
+            <button id="login">Login</button>
+            <div class="cart-wrapper flex col">
+            <img id="cart" src="../assets/icons/shopping-bag.svg" alt="">
+            <div class="h-cart col">
+                <img src="../assets/icons/cart (1).png" alt="">
+                <p>Your Cart is Currently Empty</p>
+            </div>
+            </div>
+        </div>
+        
+    </nav>
+
+    <div id="h-wrapper">
+        <div id="h-c" class="hidden-c flex col">
+        <a id="home" href="index.html">Home</a>
+        <a id="works-gallery" href="works_gallery.html">Works & Gallery</a>
+        <a id="shop" href="shop.html">Shop</a>
+        <a id="hid-login">Login</a>
+    </div>
+    </div>
 
         <header class="bg flex col">
             <div class="bg-content flex col">
@@ -74,24 +148,49 @@
             </div>
         </section>
 
+        <footer class="flex col">
+            <div class="first-col flex row">
+                <div class="links flex col">
+                    <p>Help</p>
+                    <ul>
+                        <li><a href="">Customer service</a></li>
+                        <li><a href="">Track my order</a></li>
+                    </ul>
+                </div>
+                <div class="links flex col">
+                    <p>Resources</p>
+                    <ul>
+                        <li><a href="">Photo Credits</a> </li>
+                    </ul>
+                </div>
+                <div class="links flex col">
+                    <p>Our Networks</p>
+                    <ul>
+                        <li><a href="">Instagram</a></li>
+                        <li><a href="">Facebook</a></li>
+                        <li><a href="">Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <img src="../assets/icons/logo2.svg" alt="">
+        </footer>
+
+    <script src="../scripts/nav.js"></script>
     <script>
         const main_bttn = document.getElementById("main-bttn");
         const gallery_bttn = document.getElementById("gallery-bttn");
         const shop_bttn = document.getElementById("shop-bttn");
         
         main_bttn.addEventListener('click', () => {
-            window.location.href = "index.php";
+            window.location.href = "index.html";
         });
         gallery_bttn.addEventListener('click', () => {
-            window.location.href = "works_gallery.php";
+            window.location.href = "works_gallery.html";
         });
         shop_bttn.addEventListener('click', () => {
-            window.location.href = "shop.php";
+            window.location.href = "shop.html";
         });
     </script>
 </body>
 </html>
 
-<?php
-include("footer.html");
-?>

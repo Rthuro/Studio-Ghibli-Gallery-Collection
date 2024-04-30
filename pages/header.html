@@ -81,18 +81,4 @@
     </div>
     </div>
     
-    <script src="../scripts/login.js"></script>
-    <script>
-        const cartBttn = document.getElementById('cart');
-const cartContainer = document.querySelector('.h-cart');
-
-cartBttn.addEventListener('click', () => {
-  cartContainer.style.display = cartContainer.style.display === 'none'? 'flex' : 'none';
-});
-
-document.addEventListener('click', (event) => {
-  if (!cartContainer.contains(event.target) &&!cartBttn.contains(event.target)) {
-    cartContainer.style.display = 'none';
-  }
-});
-    </script>
+    <script src="../scripts/nav.js"></script>

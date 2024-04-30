@@ -80,28 +80,10 @@
                             <label for="category">Product Category</label>
                             <div class="flex row">
                                  <select style="width:fit-content;" name="category" id="category">
-                                <?php 
-                                             $conn = mysqli_connect("localhost", "root", "", "studio_ghibli");
-            
-                                             if (!$conn) {
-                                                         die("Connection failed: " . mysqli_connect_error());
-                                                         }
-                                                     
-                                      $sql = "SELECT category FROM product_category";
-                                      $result = mysqli_query($conn, $sql);
-
-                                         if (mysqli_num_rows($result) > 0) { 
-                                          while ($row = mysqli_fetch_assoc($result)) {
-                                                 $prod_category = $row['category'];
-                                             echo "<option value='$prod_category'>$prod_category</option>";
-                                                         }
-                                          } else {
-                                          echo "No category found";
-                                          }
-                 
-                                          mysqli_close($conn);
-
-                                        ?>
+                                    <option value='Apparel'>Apparel</option>
+                                    <option value="Apparel">Collectibles</option>
+                                    <option value="Stationery">Stationery</option>
+                              
                             </select>
 
                             <button  id="add_category">
@@ -1037,28 +1019,11 @@
                                 <div>
                                     <label for="category">Product Category</label>
                                     <select name="category" id="category">
-                                        <?php 
-                                             $conn = mysqli_connect("localhost", "root", "", "studio_ghibli");
-            
-                                             if (!$conn) {
-                                                         die("Connection failed: " . mysqli_connect_error());
-                                                         }
-                                                     
-                                      $sql = "SELECT category FROM product_category";
-                                      $result = mysqli_query($conn, $sql);
-
-                                         if (mysqli_num_rows($result) > 0) { 
-                                          while ($row = mysqli_fetch_assoc($result)) {
-                                                 $prod_category = $row['category'];
-                                             echo "<option value='$prod_category'>$prod_category</option>";
-                                                         }
-                                          } else {
-                                          echo "No films found";
-                                          }
-                 
-                                          mysqli_close($conn);
-
-                                        ?>
+                                            <option value='Apparel'>Apparel</option>
+                                            <option value="Apparel">Collectibles</option>
+                                            <option value="Stationery">Stationery</option>
+                                      
+                                    </select>
                                     </select>
                                 </div>
 
@@ -1162,29 +1127,34 @@
                                 <option value="">Trash</option>
                             </select>
                             <select name="filter" id="filter">
-                                <?php
-                    $conn = mysqli_connect("localhost", "root", "", "studio_ghibli");
-            
-                            if (!$conn) {
-                                        die("Connection failed: " . mysqli_connect_error());
-                                        }
-                                    
-
-                                        $sql = "SELECT title FROM films";
-                                        $result = mysqli_query($conn, $sql);
-                                        
-                                        echo "<option disabled selected>Studio Ghibli Works</option>";
-                                        if (mysqli_num_rows($result) > 0) { 
-                                        while ($row = mysqli_fetch_assoc($result)) {
-                                            $film_name = $row['title'];
-                                            echo "<option value='$film_name'>$film_name</option>";
-                                        }
-                                        } else {
-                                        echo "No films found";
-                                        }
-
-                                        mysqli_close($conn);
-                                 ?>
+                            
+                                    <option disabled selected>Studio Ghibli Works</option>
+                                     <option value='Arriety'>Arriety</option>
+                                     <option value='From Poppy Hill'>From Poppy Hill</option>
+                                     <option value='Howls Moving Castle'>Howl's Moving Castle</option>
+                                     <option value='Kikis Delivery Service'>Kiki's Delivery Service</option>
+                                     <option value='Spirited Away'>Spirited Away</option>
+                                     <option value='The Wind Rises'>The Wind Rises</option>
+                                     <option value='The Boy and the Heron'>The Boy and the Heron</option>
+                                     <option value='Earwig and the Witch'>Earwig and the Witch</option>
+                                     <option value='Castle in the Sky'>Castle in the Sky</option>
+                                     <option value='	
+                                     The Cat Returns'>	
+                                     The Cat Returns</option>
+                                     <option value='When Marnie Was There'>When Marnie Was There</option>
+                                     <option value='Princess Mononoke'>Princess Mononoke</option>
+                                     <option value='Nausicaa of the Valley of the Wind'>Nausicaa of the Valley of the Wind</option>
+                                     <option value='Pom Poko'>Pom Poko</option>
+                                     <option value='Ponyo'>Ponyo</option>
+                                     <option value='Porco Rosso'>Porco Rosso</option>
+                                     <option value='The Tale of the Princess Kaguya'>The Tale of the Princess Kaguya</option>
+                                     <option value='Tales from Earthsea'>Tales from Earthsea</option>
+                                     <option value='The Red Turtle'>The Red Turtle</option>
+                                     <option value='Whisper of the Heart'>Whisper of the Heart</option>
+                                     <option value='My Neighbor Totoro'>My Neighbor Totoro</option>
+                                     <option value='My Neighbors the Yamadas'>My Neighbors the Yamadas</option>
+                                     <option value='Grave of the Fireflies'>Grave of the Fireflies</option>
+                           
                             </select>
                             <select name="filter" id="filter">
                                 <option value="">Recently Added</option>
