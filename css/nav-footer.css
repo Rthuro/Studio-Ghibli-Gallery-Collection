@@ -79,6 +79,7 @@ nav .center{
 }
 
 nav .right{
+    position: relative;
     justify-content: end;
     gap:12px;
 }
@@ -191,13 +192,13 @@ nav .center a:hover{
 }
 .hidden-c{
     position: fixed;
-    top:50;
+    top:0;
     bottom:0;
     left: 0;
     width: 200px;
     background-color: #fff;
     box-shadow: var(--bx-shdw);
-    padding-top: 24px;
+    padding-top: 70px;
 }
  .hidden-c a{
     padding:8px 0;
@@ -206,12 +207,13 @@ nav .center a:hover{
 }
  
 .cart-wrapper{
+  
     position: relative;
 }
 .h-cart{
     display: none;
     position: absolute;
-    top:34;
+    top:0;
     right: 0;
     width:400px;
     height: 250px;
@@ -222,6 +224,7 @@ nav .center a:hover{
     border:var(--basic-brdr);
     box-shadow: var(--bx-shdw);
     padding:8px;
+    margin-top: 45px;
 }
 .h-cart img{
     padding: 16px;
