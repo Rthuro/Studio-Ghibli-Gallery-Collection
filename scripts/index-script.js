@@ -7,14 +7,14 @@
  const shop_bttn = document.getElementById("shop-bttn");
 
  banner_bttn.addEventListener('click', () => {
-  window.location.href = "shop.php";
+  window.location.href = "shop.html";
 });
  browse_bttn.addEventListener('click', () => {
-   window.location.href = "works_gallery.php";
+   window.location.href = "works_gallery.html";
  });
 
 shop_bttn.addEventListener('click', () => {
-   window.location.href = "shop.php";
+   window.location.href = "shop.html";
  });
 
  const showMoreBttn = document.getElementById('g-show-more-bttn');
@@ -47,7 +47,7 @@ worksListContainer.forEach(container => {
     let title = container.querySelector('.film-title').textContent;
     
       localStorage.setItem("movietitle", title);
-      window.location.href = "works_site.php";
+      window.location.href = "works_site.html";
 
 }); 
 });

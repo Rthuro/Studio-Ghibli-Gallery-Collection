@@ -55,3 +55,17 @@ menu_cont.addEventListener('click', (event) => {
         menu_cont.style.display = 'none';
     }
 });
+
+//hidden cart
+const cartBttn = document.getElementById('cart');
+const cartContainer = document.querySelector('.h-cart');
+
+cartBttn.addEventListener('click', () => {
+  cartContainer.style.display = cartContainer.style.display === 'none'? 'flex' : 'none';
+});
+
+document.addEventListener('click', (event) => {
+  if (!cartContainer.contains(event.target) &&!cartBttn.contains(event.target)) {
+    cartContainer.style.display = 'none';
+  }
+});

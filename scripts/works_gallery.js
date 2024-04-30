@@ -34,7 +34,7 @@ worksListContainer.forEach(container => {
     localStorage.setItem("filmPosterImg", posterImage);
       localStorage.setItem("movietitle", title);
 
-      window.location.href = "works_site.php";
+      window.location.href = "works_site.html";
 
 }); 
 });

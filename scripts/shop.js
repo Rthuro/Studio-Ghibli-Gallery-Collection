@@ -41,7 +41,7 @@ products.forEach(container => {
      localStorage.setItem("productName", productName);
      localStorage.setItem("productPrice", productPrice);
 
-   window.location.href = "product_page.php";
+   window.location.href = "product_page.html";
   });
 });
 
