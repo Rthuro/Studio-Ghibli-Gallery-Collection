@@ -48,6 +48,8 @@ body{
 nav .center a:last-child{
     color: #0781c8;
 }
+
+
 h1{
     color: var(--fnt-clr-black);
     width: 100%;
