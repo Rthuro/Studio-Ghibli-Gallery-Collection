@@ -23,8 +23,7 @@ sidebar_bttn.addEventListener('click', () => {
 
 sidebar_cont.addEventListener('click', (event) => {
     if(event.target === sidebar_cont){
-      // sidebar_cont.style.display = 'none';
-      sidebar_cont.style.display = menu_cont.style.display === 'none' ? 'flex' : 'none';
+       sidebar_cont.style.display = 'none';
     }
 });
 
