@@ -22,7 +22,7 @@
                 <p>Password</p>
                 <input type="text" name="password" id="password" placeholder="password">
             </div>
-            <button id="bttn">Log in</button>
+            <button id="bttn" class="indexLogin">Log in</button>
             <a class="blue">Forget password?</a>
             <p>Don't have an account? <a id="login-create" class="blue">Create one</a> </p>
         </div>
@@ -189,6 +189,11 @@
         });
         shop_bttn.addEventListener('click', () => {
             window.location.href = "pages/shop.html";
+        });
+        
+        const loginToAdmin = document.querySelector('#login-container #bttn');
+        loginToAdmin.addEventListener('click', () => {
+            window.location.href = "pages/admin.html";
         });
     </script>
 </body>
