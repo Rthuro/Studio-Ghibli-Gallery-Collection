@@ -182,8 +182,9 @@ h1{
     font-weight: 500;
     gap:4px;
     border-radius: 20px;
-    border:1px solid #222222;
+    border:1px solid var(--fnt-clr-black);
     background-color: #ffffff;
+    color:var(--fnt-clr-black);
 }
 
 .works #g-show-more-bttn.showless{
