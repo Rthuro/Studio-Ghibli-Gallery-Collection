@@ -211,3 +211,10 @@ chevronBttn(pagination_s,chevronBttn_s);
 defaultClickedPage(pagination_g);
 forEachButton(pagination_g);
 chevronBttn(pagination_g,chevronBttn_g);
+
+/* log out account */
+
+const logout = document.querySelector('.profile #log-out');
+logout.addEventListener('click', ()=>{
+  window.location.href = '../index.html';
+});

@@ -8,7 +8,7 @@ const create_container = document.getElementById('create-container');
 
 const login_to_create = document.getElementById('login-create');
 const create_to_login = document.getElementById('create-login');
-
+const loginToAdmin = document.querySelector('#login-container #bttn')
 
 hid_login.addEventListener('click', () => {
   login.style.visibility  = "visible";
@@ -42,6 +42,12 @@ create_to_login.addEventListener('click', () =>{
     create_container.style.visibility  = "hidden";
     login.style.visibility  = "visible";
 });
+
+loginToAdmin.addEventListener('click',()=>{
+  window.location.href = '../pages/admin.html';
+});
+
+
 
 // Hidden Menu 
 
