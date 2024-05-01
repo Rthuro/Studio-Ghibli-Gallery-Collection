@@ -163,14 +163,16 @@ header .sort-container{
     background-color: #2222223f;
 }
 #h-sidebar .filter-container{
+    display: flex;
     position: fixed;
     top:50;
     bottom:0;
     left: 0;
-    width: 200px;
+    width: 300px;
     background-color: #fff;
     box-shadow: var(--bx-shdw);
     padding-top: 24px;
+    padding-top: 100px;
 }
 
 .prod-container{
