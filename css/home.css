@@ -306,21 +306,7 @@ h1{
     font-size: 1.4rem;
     font-weight: 500 ;
 }
-.img-container .ImgHovered .bttns{
-    justify-content: center;
-    gap:8px;
-}
-.img-container .ImgHovered .bttns button{
-    color:#222222;
-    border:none;
-    background-color: #ffffff;
-    padding: 4px;
-    font-size: 0.8rem;
-    width: 100px;
-}
-.img-container .ImgHovered .bttns button:hover{
-    background-color: #ffffffe1;
-}
+
 
 
  .view-container {
