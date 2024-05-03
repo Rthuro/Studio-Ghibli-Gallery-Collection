@@ -1,6 +1,5 @@
 
 
-
 const ImgHoverContainer = document.querySelectorAll('.img-container');
 
 ImgHoverContainer.forEach(container => {
@@ -13,28 +12,24 @@ ImgHoverContainer.forEach(container => {
 
 
 /* TO view image from the home page */
-const viewBttn = document.querySelectorAll('.view-bttn');
-const closeBttn = document.querySelector(' .view-container .close');
+const click_img = document.querySelectorAll('.img-container');
 const view =  document.querySelector('.view-container');
 const view_download = document.getElementById('view-download');
 const view_close = document.getElementById('view-close');
 
-viewBttn.forEach(button => {
-  button.addEventListener('click', () => { 
+click_img.forEach(container => {
+  container.addEventListener('click', () => { 
     view.classList.add('active');
 
-    const movieTitle = button.closest('.ImgHovered').querySelector(' .image-name').textContent;
+    const movieTitle = container.querySelector('.image-name').textContent;
 
-    const closestImgContainer = button.closest('.img-container');
-    const movieSrc = closestImgContainer.querySelector('img').src;
+    const movieSrc = container.querySelector('img').src;
 
            const setTitle =  document.querySelector(' .view-container .set-title'); 
            const changeMovieSrc = document.querySelector(' .view-container .movieImage'); 
 
               setTitle.innerHTML = movieTitle;
               changeMovieSrc.src = movieSrc;
-
-   
   });
 });
 
@@ -54,22 +49,6 @@ view_close.addEventListener('click',() => {
   view.classList.remove('active');
 });
 
-
-/* TO download image from the home page */
-const downloadButtons = document.querySelectorAll('#download-bttn');
-
-  downloadButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      const closestImg = button.closest('.img-container').querySelector('img');
-      const imageSrc = closestImg.src;
-      const link = document.createElement('a');
-      link.href = imageSrc;
-      link.download = link.href.split('/').pop();  
-      link.click();
-    });
-  });
-
-  
   let storedTitle = localStorage.getItem("movietitle");
   let storedPosterImage = localStorage.getItem('filmPosterImg'); 
 

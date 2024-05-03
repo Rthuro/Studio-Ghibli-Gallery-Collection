@@ -40,20 +40,19 @@ shop_bttn.addEventListener('click', () => {
     });
 
     const worksListContainer = document.querySelectorAll('.works .works-list-container .film');
-   
-
-worksListContainer.forEach(container => {
-  container.addEventListener( 'click', () =>{
-    let title = container.querySelector('.film-title').textContent;
+  
+    worksListContainer.forEach(container => {
+      container.addEventListener( 'click', () =>{
+        let title = container.querySelector('.film-title').textContent;
+        let  poster = container.querySelector('.film-poster').src;
+        
+         localStorage.setItem('filmPosterImg',poster)
+          localStorage.setItem("movietitle", title);
+          window.location.href = "works_site.html";
     
-      localStorage.setItem("movietitle", title);
-      window.location.href = "works_site.html";
-
-}); 
-});
+    }); 
+    });
  
-
-
 
 
 
