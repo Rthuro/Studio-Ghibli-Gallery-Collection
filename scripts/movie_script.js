@@ -49,6 +49,12 @@ view_close.addEventListener('click',() => {
   view.classList.remove('active');
 });
 
+view.addEventListener('click', (event) => {
+       if(event.target === view){
+        view.classList.remove('active');
+       }
+});
+
   let storedTitle = localStorage.getItem("movietitle");
   let storedPosterImage = localStorage.getItem('filmPosterImg'); 
 
