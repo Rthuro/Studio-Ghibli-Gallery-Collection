@@ -40,10 +40,9 @@ body{
 }
 
 body .text{
-    margin:0 120px;
+    text-align: left;
     font-size: 1.4rem;
     font-weight: 500;
-    width: auto;
     border-bottom: 1px solid var(--light-blk);
 }
 
@@ -79,11 +78,14 @@ header .work-abt .movie-title .light{
     font-size: 1rem;
     font-weight: 400;
 }
+header, .text{
+ width: 1300px;
+}
 
 @media screen and (min-width:0px) and (max-width:750px){
-    body .text{
-        margin:0 54px;
-    }
+    header, .text{
+        width: 90%;
+       }
     header{
         flex-direction: column;
         padding:100px 0;
@@ -104,9 +106,9 @@ header .work-abt .movie-title .light{
 }
 
 @media screen and (min-width:750px) and (max-width: 1220px){ 
-    body .text{
-        margin:0 154px;
-    }
+    header, .text{
+        width: 700px;
+       }
     header{
         flex-direction: column;
         padding:100px 0;
