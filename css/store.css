@@ -41,6 +41,9 @@ ul{
 
 }
 body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding-top: 100px;
     position: relative;
     background-image: #ffffff;
@@ -57,10 +60,11 @@ h1{
     font-size: 2.7rem;
 }
 
-
+header, .shop-bttm{
+    width: 1220px;
+}
 
 header{
-    width:auto;
     margin: 16px 150px;
     padding: 24px;
     justify-content: space-between;
@@ -90,7 +94,6 @@ header .sort-container{
     gap:8px;
 }
 .shop-bttm{
-    width:auto;
     margin: 16px 150px;
     justify-content: space-between;
     align-items: start;
@@ -262,12 +265,17 @@ header .sort-container{
     color:#fff;
 }
 @media screen and (min-width:0px) and (max-width:700px){ 
+  .shop-bttm{
+        width: 400px;
+    }
     
         h1{
             font-size: 2rem;
         }
+
         header{
-            margin: 16px 0;
+            width: 100%;
+            margin: 16px 24px;
             flex-direction: column;
             gap:8px;
         }
@@ -275,7 +283,7 @@ header .sort-container{
             font-size: 0.8rem;
         }
         header .search-container input{
-            width: 390px;
+            width: 350px;
         }
          header .sort-container select{
             width: 240px;
@@ -315,10 +323,13 @@ header .sort-container{
 }
 
 @media screen and (min-width:700px) and (max-width: 1100px){ 
+    header, .shop-bttm{
+        width: 700px;
+    }
     header{
         margin: 16px 40px;
         gap:8px;
-        width: 90%;
+       
     }
     header .search-container input,header .sort-container select, .sort-container label{
         font-size: 0.8rem;
@@ -359,13 +370,14 @@ header .sort-container{
      
 }
 @media screen and (min-width:1100px) and (max-width:1350px ){ 
-    .filter-container{
-        width: 250px;
-    }
+    
     .prod-container{
         align-items: center;
         grid-template-columns: repeat(3,auto);
         gap:8px;
+    }
+    header, .shop-bttm{
+        width: 1000px;
     }
 
 }

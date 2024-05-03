@@ -221,10 +221,11 @@ p{
     margin: 16px 0;
 }
 .nav-content form {
-    width: 100%;
+    width: fit-content;
     justify-content: space-between;
-    gap:8px;
+    gap:24px;
 }
+
 .nav-content .prod-e form .r-layout  div{
     display: flex;
     flex-direction: column;
